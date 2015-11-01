@@ -52,6 +52,7 @@ body {
   color: $base-color;
   background: $base-bg;
   position: relative;
+  min-width:745px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
   /* The html and body elements cannot have any padding or margin. */
 }
@@ -67,6 +68,7 @@ body {
 .container {
   /*min-width: 978px;*/
   max-width:978px;
+
 }
 .content-block{
   position: relative;

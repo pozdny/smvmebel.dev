@@ -30,6 +30,7 @@ body {
   color: #313131;
   background: #EEF3FA;
   position: relative;
+  min-width: 745px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
   /* The html and body elements cannot have any padding or margin. */ }
 
@@ -1070,7 +1071,6 @@ header .top-content {
     #advantages .infografika-one .text, #advantages .infografika-two .text, #advantages .infografika-three .text, #advantages .infografika-four .text {
       color: #fff;
       font-size: 1.5em;
-      z-index: 2;
       width: 50%; }
     #advantages .infografika-one .img, #advantages .infografika-two .img, #advantages .infografika-three .img, #advantages .infografika-four .img {
       width: 200px;
@@ -1180,16 +1180,31 @@ header .top-content {
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
     background: purple; } }
-@media (min-width: 1200px) {
-  /*.container{
-    background: green;
-  }*/ }
 @media (min-width: 768px) {
-  /*.container{
-    background: purple;
-  }*/
+  .container {
+    background: gray; }
+
   .navbar__initial {
-    background: transparent none repeat scroll 0 0 !important; } }
+    background: transparent none repeat scroll 0 0 !important; }
+
+  header .top-content .inner-content .header-right {
+    width: 57%; }
+    header .top-content .inner-content .header-right .main-text {
+      font-size: 5.2em; }
+      header .top-content .inner-content .header-right .main-text span:last-child {
+        padding-left: 120px; }
+    header .top-content .inner-content .header-right .slogan-text {
+      font-size: 3.0em; }
+      header .top-content .inner-content .header-right .slogan-text span:first-child {
+        padding-left: 120px; }
+      header .top-content .inner-content .header-right .slogan-text span:last-child {
+        padding-left: 80px; } }
+/*@media (min-width: $screen-lg-min){
+  .container{
+    background: skyblue;
+  }
+
+}*/
 @media (max-width: 1200px) {
   .container {
     background: black; }
@@ -1241,16 +1256,34 @@ header .top-content {
 @media (max-width: 768px) {
   .container {
     background: violet; } }
-@media (min-width: 767px) {
-  /*.container{
+@media (min-width: 767px) and (max-width: 1200px) {
+  .container {
+    background: green; }
+
+  .top-content .inner-content .header-right {
+    width: 57%; }
+    .top-content .inner-content .header-right .main-text {
+      font-size: 5.5em; }
+      .top-content .inner-content .header-right .main-text span:last-child {
+        padding-left: 150px; }
+    .top-content .inner-content .header-right .slogan-text {
+      font-size: 3.0em; }
+      .top-content .inner-content .header-right .slogan-text span:first-child {
+        padding-left: 160px; }
+      .top-content .inner-content .header-right .slogan-text span:last-child {
+        padding-left: 80px; } }
+/*@media (min-width: $screen-xs-max) {
+  .container{
     background: orange;
-  }*/ }
+  }
+
+}*/
 @media (max-width: 991px) {
   .container {
     background: yellow; }
 
   header .top-content {
-    /*height:700px;*/ }
+    height: 600px; }
     header .top-content .inner-content #logo {
       width: 205px;
       height: 205px;
@@ -1263,15 +1296,28 @@ header .top-content {
         width: 111px;
         height: 117px; }
     header .top-content .inner-content .header-right {
-      width: 60%; }
+      width: 54%; }
+      header .top-content .inner-content .header-right .info-line {
+        height: 80px;
+        margin: 28px 0 0 -115px; }
+        header .top-content .inner-content .header-right .info-line #phone-line .text {
+          width: 58%;
+          font-size: 1.0em;
+          padding: 20px 20px; }
+          header .top-content .inner-content .header-right .info-line #phone-line .text span:first-child {
+            padding-left: 40px; }
+        header .top-content .inner-content .header-right .info-line #phone-line .btn-send {
+          width: 140px;
+          margin-top: 10px;
+          font-size: 1.1em; }
       header .top-content .inner-content .header-right .main-text {
-        font-size: 4.5em; }
+        font-size: 2.9em; }
         header .top-content .inner-content .header-right .main-text span:last-child {
-          padding-left: 100px; }
+          padding-left: 80px; }
       header .top-content .inner-content .header-right .slogan-text {
-        font-size: 2.8em; }
+        font-size: 1.9em; }
         header .top-content .inner-content .header-right .slogan-text span:first-child {
-          padding-left: 100px; }
+          padding-left: 80px; }
         header .top-content .inner-content .header-right .slogan-text span:last-child {
           padding-left: 40px; }
 
@@ -1280,7 +1326,10 @@ header .top-content {
   #catalog .chiar-middle.bottom {
     margin-top: -80px; }
   #catalog .mebel {
-    margin-top: 0px; } }
+    margin-top: 0px; }
+    #catalog .mebel .title {
+      top: 118px;
+      right: -208px; } }
 @media (max-width: 767px) {
   .container {
     background: red; }
@@ -1307,7 +1356,7 @@ header .top-content {
     header .top-content .inner-content .header-right {
       width: 50%; }
       header .top-content .inner-content .header-right .info-line {
-        margin: 20px 0 0 -95px; }
+        margin: 48px 0 0 -107px; }
         header .top-content .inner-content .header-right .info-line #phone-line .text {
           width: 100%;
           float: left;
@@ -1319,7 +1368,9 @@ header .top-content {
           header .top-content .inner-content .header-right .info-line #phone-line .text span:first-child {
             padding-left: 40px; }
         header .top-content .inner-content .header-right .info-line #phone-line .btn-send {
-          margin-top: 10px; }
+          width: 180px;
+          margin: 40px 0 0 80px;
+          font-size: 1.2em; }
       header .top-content .inner-content .header-right .main-text {
         font-size: 2.0em; }
         header .top-content .inner-content .header-right .main-text span:last-child {
