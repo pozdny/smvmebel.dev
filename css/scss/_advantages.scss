@@ -4,108 +4,141 @@
     background: #707270;
   }
   & .container {
-    padding:110px 0;
+    padding:70px 0;
   }
   .infografika-one, .infografika-two{
-    background: url('../../img/main/romb-top.png') no-repeat center top;
+    min-height:353px;
+    .romb{
+      &.top{
+        background: url('../../img/main/romb-top.png') no-repeat center top;
+      }
+    }
+  }
+  .infografika-three, .infografika-four{
+    min-height:190px;
+    .romb{
+      &.bottom{
+        background: url('../../img/main/romb-bottom.png') no-repeat center top;
+      }
+    }
   }
   .infografika-one, .infografika-two, .infografika-three, .infografika-four{
-    height:327px;
-    .text{
-      color:#fff;
-      font-size: 1.5em;
-      width:50%;
 
+    .romb {
+      width: 518px;
+      height: 353px;
+      position: absolute;
+      .text {
+        color: #fff;
+        font-size: 1.5em;
+        width: 50%;
+
+      }
+      .img {
+
+        width: 200px;
+        height: 164px;
+        background: url('../../img/main/infografika.png') no-repeat center top;
+
+      }
+      img {
+        width: 100%;
+      }
     }
-    .img {
-
-      width: 200px;
-      height: 164px;
-      background: url('../../img/main/infografika.png') no-repeat center top;
-
-    }
-    img {
-      width: 100%;
-    }
-
 
   }
   .infografika-one{
-    .text{
-      margin-left:200px;
-      padding:20px 0 0 40px;
-      &.top{
-        top:-40px;
-        right: 0px;
-        span{
-          display: block;
+    .romb{
+      left:15px;
+      .text{
+        margin-left:200px;
+        padding:20px 0 0 40px;
+        &.top{
+          top:-40px;
+          right: 0px;
+          span{
+            display: block;
+          }
+          &:first-child span{
+            padding-left:20px;
+          }
+          span:last-child{
+            padding-left:60px;
+          }
         }
-        &:first-child span{
-          padding-left:20px;
-        }
-        span:last-child{
-          padding-left:60px;
+      }
+      .img {
+        margin:-25px 0 0 65px;
+        &.hand {
+          background-position: 0 0;
         }
       }
     }
-    .img {
-      margin:-25px 0 0 55px;
-      &.hand {
-        background-position: 0 0;
-      }
-    }
+
   }
   .infografika-two{
-    .text{
-      margin-left:170px;
-      padding:5px 0 0 40px;
-      &.top{
-        top:-40px;
-        right: 20px;
-        font-size:1.4em;
-        span{
-          display: block;
+    .romb{
+      right:55px;
+      .text{
+        margin-left:170px;
+        padding:5px 0 0 40px;
+        &.top{
+          top:-40px;
+          font-size:1.4em;
+          span{
+            display: block;
+          }
+          &:first-child span{
+            padding-left:40px;
+          }
+          span:nth-child(3){
+            padding-left:60px;
+          }
+          span:last-child{
+            padding-left:80px;
+          }
         }
-        &:first-child span{
-          padding-left:20px;
-        }
-        span:nth-child(3){
-          padding-left:40px;
-        }
-        span:last-child{
-          padding-left:60px;
+      }
+      .img {
+        margin:-30px 0 0 65px;
+        &.hand {
+          background-position: -200px 0;
         }
       }
     }
-    .img {
-      margin:-30px 0 0 50px;
-      &.hand {
-        background-position: -200px 0;
-      }
-    }
+
   }
   .infografika-three{
-    padding-left:200px;
-    .text{
-      &.top{
-        top:-40px;
-        right: 20px;
-        font-size:1.4em;
-        span{
-          display: block;
+    .romb{
+      left:55px;
+      top:-130px;
+      .text{
+        &.top{
+          top:-40px;
+          right: 20px;
+          font-size:1.4em;
+          span{
+            display: block;
+          }
+          &:first-child span{
+            padding-left:20px;
+          }
+          span:nth-child(3){
+            padding-left:40px;
+          }
+          span:last-child{
+            padding-left:60px;
+          }
         }
-        &:first-child span{
-          padding-left:20px;
-        }
-        span:nth-child(3){
-          padding-left:40px;
-        }
-        span:last-child{
-          padding-left:60px;
+      }
+      .img {
+        margin:90px 0 0 240px;
+        &.hand {
+          background-position: -400px 0;
         }
       }
     }
-    .block-white {
+    /*.block-white {
       background: rgb(215, 216, 215);
       &:after {
         left: -177px;
@@ -120,30 +153,40 @@
           }
         }
       }
-    }
+    }*/
   }
   .infografika-four{
-    padding-left:180px;
-    .text{
-      &.top{
-        top:-40px;
-        right: 20px;
-        font-size:1.4em;
-        span{
-          display: block;
+    .romb{
+      right:15px;
+      top:-130px;
+      .text{
+        &.top{
+          top:-40px;
+          right: 20px;
+          font-size:1.4em;
+          span{
+            display: block;
+          }
+          &:first-child span{
+            padding-left:20px;
+          }
+          span:nth-child(3){
+            padding-left:40px;
+          }
+          span:last-child{
+            padding-left:60px;
+          }
         }
-        &:first-child span{
-          padding-left:20px;
-        }
-        span:nth-child(3){
-          padding-left:40px;
-        }
-        span:last-child{
-          padding-left:60px;
+      }
+      .img {
+        margin:90px 0 0 240px;
+        &.hand {
+          background-position: -600px 0;
         }
       }
     }
-    .block-white {
+
+    /*.block-white {
       background: rgb(215, 216, 215);
       &:after {
         left: -177px;
@@ -159,7 +202,7 @@
           }
         }
       }
-    }
+    }*/
   }
 
 }

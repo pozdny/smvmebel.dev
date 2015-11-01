@@ -30,7 +30,7 @@ body {
   color: #313131;
   background: #EEF3FA;
   position: relative;
-  min-width: 745px;
+  min-width: 978px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
   /* The html and body elements cannot have any padding or margin. */ }
 
@@ -42,7 +42,7 @@ body {
   padding-bottom: 0px; }
 
 .container {
-  /*min-width: 978px;*/
+  min-width: 978px;
   max-width: 978px; }
 
 .content-block {
@@ -1063,102 +1063,140 @@ header .top-content {
   #advantages .bufbg {
     background: #707270; }
   #advantages .container {
-    padding: 110px 0; }
+    padding: 70px 0; }
   #advantages .infografika-one, #advantages .infografika-two {
-    background: url("../../img/main/romb-top.png") no-repeat center top; }
-  #advantages .infografika-one, #advantages .infografika-two, #advantages .infografika-three, #advantages .infografika-four {
-    height: 327px; }
-    #advantages .infografika-one .text, #advantages .infografika-two .text, #advantages .infografika-three .text, #advantages .infografika-four .text {
+    min-height: 353px; }
+    #advantages .infografika-one .romb.top, #advantages .infografika-two .romb.top {
+      background: url("../../img/main/romb-top.png") no-repeat center top; }
+  #advantages .infografika-three, #advantages .infografika-four {
+    min-height: 190px; }
+    #advantages .infografika-three .romb.bottom, #advantages .infografika-four .romb.bottom {
+      background: url("../../img/main/romb-bottom.png") no-repeat center top; }
+  #advantages .infografika-one .romb, #advantages .infografika-two .romb, #advantages .infografika-three .romb, #advantages .infografika-four .romb {
+    width: 518px;
+    height: 353px;
+    position: absolute; }
+    #advantages .infografika-one .romb .text, #advantages .infografika-two .romb .text, #advantages .infografika-three .romb .text, #advantages .infografika-four .romb .text {
       color: #fff;
       font-size: 1.5em;
       width: 50%; }
-    #advantages .infografika-one .img, #advantages .infografika-two .img, #advantages .infografika-three .img, #advantages .infografika-four .img {
+    #advantages .infografika-one .romb .img, #advantages .infografika-two .romb .img, #advantages .infografika-three .romb .img, #advantages .infografika-four .romb .img {
       width: 200px;
       height: 164px;
       background: url("../../img/main/infografika.png") no-repeat center top; }
-    #advantages .infografika-one img, #advantages .infografika-two img, #advantages .infografika-three img, #advantages .infografika-four img {
+    #advantages .infografika-one .romb img, #advantages .infografika-two .romb img, #advantages .infografika-three .romb img, #advantages .infografika-four .romb img {
       width: 100%; }
-  #advantages .infografika-one .text {
-    margin-left: 200px;
-    padding: 20px 0 0 40px; }
-    #advantages .infografika-one .text.top {
-      top: -40px;
-      right: 0px; }
-      #advantages .infografika-one .text.top span {
-        display: block; }
-      #advantages .infografika-one .text.top:first-child span {
-        padding-left: 20px; }
-      #advantages .infografika-one .text.top span:last-child {
-        padding-left: 60px; }
-  #advantages .infografika-one .img {
-    margin: -25px 0 0 55px; }
-    #advantages .infografika-one .img.hand {
-      background-position: 0 0; }
-  #advantages .infografika-two .text {
-    margin-left: 170px;
-    padding: 5px 0 0 40px; }
-    #advantages .infografika-two .text.top {
-      top: -40px;
-      right: 20px;
-      font-size: 1.4em; }
-      #advantages .infografika-two .text.top span {
-        display: block; }
-      #advantages .infografika-two .text.top:first-child span {
-        padding-left: 20px; }
-      #advantages .infografika-two .text.top span:nth-child(3) {
-        padding-left: 40px; }
-      #advantages .infografika-two .text.top span:last-child {
-        padding-left: 60px; }
-  #advantages .infografika-two .img {
-    margin: -30px 0 0 50px; }
-    #advantages .infografika-two .img.hand {
-      background-position: -200px 0; }
+  #advantages .infografika-one .romb {
+    left: 15px; }
+    #advantages .infografika-one .romb .text {
+      margin-left: 200px;
+      padding: 20px 0 0 40px; }
+      #advantages .infografika-one .romb .text.top {
+        top: -40px;
+        right: 0px; }
+        #advantages .infografika-one .romb .text.top span {
+          display: block; }
+        #advantages .infografika-one .romb .text.top:first-child span {
+          padding-left: 20px; }
+        #advantages .infografika-one .romb .text.top span:last-child {
+          padding-left: 60px; }
+    #advantages .infografika-one .romb .img {
+      margin: -25px 0 0 65px; }
+      #advantages .infografika-one .romb .img.hand {
+        background-position: 0 0; }
+  #advantages .infografika-two .romb {
+    right: 55px; }
+    #advantages .infografika-two .romb .text {
+      margin-left: 170px;
+      padding: 5px 0 0 40px; }
+      #advantages .infografika-two .romb .text.top {
+        top: -40px;
+        font-size: 1.4em; }
+        #advantages .infografika-two .romb .text.top span {
+          display: block; }
+        #advantages .infografika-two .romb .text.top:first-child span {
+          padding-left: 40px; }
+        #advantages .infografika-two .romb .text.top span:nth-child(3) {
+          padding-left: 60px; }
+        #advantages .infografika-two .romb .text.top span:last-child {
+          padding-left: 80px; }
+    #advantages .infografika-two .romb .img {
+      margin: -30px 0 0 65px; }
+      #advantages .infografika-two .romb .img.hand {
+        background-position: -200px 0; }
   #advantages .infografika-three {
-    padding-left: 200px; }
-    #advantages .infografika-three .text.top {
-      top: -40px;
-      right: 20px;
-      font-size: 1.4em; }
-      #advantages .infografika-three .text.top span {
-        display: block; }
-      #advantages .infografika-three .text.top:first-child span {
-        padding-left: 20px; }
-      #advantages .infografika-three .text.top span:nth-child(3) {
-        padding-left: 40px; }
-      #advantages .infografika-three .text.top span:last-child {
-        padding-left: 60px; }
-    #advantages .infografika-three .block-white {
-      background: #d7d8d7; }
-      #advantages .infografika-three .block-white:after {
+    /*.block-white {
+      background: rgb(215, 216, 215);
+      &:after {
         left: -177px;
         top: 67px;
         border-bottom-color: #595959;
-        border-width: 171px; }
-      #advantages .infografika-three .block-white .block-white-inner .img.hand {
-        background-position: -400px 0; }
+        border-width: 171px;
+      }
+      .block-white-inner {
+        .img {
+          &.hand {
+            background-position: -400px 0;
+          }
+        }
+      }
+    }*/ }
+    #advantages .infografika-three .romb {
+      left: 55px;
+      top: -130px; }
+      #advantages .infografika-three .romb .text.top {
+        top: -40px;
+        right: 20px;
+        font-size: 1.4em; }
+        #advantages .infografika-three .romb .text.top span {
+          display: block; }
+        #advantages .infografika-three .romb .text.top:first-child span {
+          padding-left: 20px; }
+        #advantages .infografika-three .romb .text.top span:nth-child(3) {
+          padding-left: 40px; }
+        #advantages .infografika-three .romb .text.top span:last-child {
+          padding-left: 60px; }
+      #advantages .infografika-three .romb .img {
+        margin: 90px 0 0 240px; }
+        #advantages .infografika-three .romb .img.hand {
+          background-position: -400px 0; }
   #advantages .infografika-four {
-    padding-left: 180px; }
-    #advantages .infografika-four .text.top {
-      top: -40px;
-      right: 20px;
-      font-size: 1.4em; }
-      #advantages .infografika-four .text.top span {
-        display: block; }
-      #advantages .infografika-four .text.top:first-child span {
-        padding-left: 20px; }
-      #advantages .infografika-four .text.top span:nth-child(3) {
-        padding-left: 40px; }
-      #advantages .infografika-four .text.top span:last-child {
-        padding-left: 60px; }
-    #advantages .infografika-four .block-white {
-      background: #d7d8d7; }
-      #advantages .infografika-four .block-white:after {
+    /*.block-white {
+      background: rgb(215, 216, 215);
+      &:after {
         left: -177px;
+
         top: 67px;
         border-bottom-color: #595959;
-        border-width: 171px; }
-      #advantages .infografika-four .block-white .block-white-inner .img.hand {
-        background-position: -600px 0; }
+        border-width: 171px;
+      }
+      .block-white-inner {
+        .img {
+          &.hand {
+            background-position: -600px 0;
+          }
+        }
+      }
+    }*/ }
+    #advantages .infografika-four .romb {
+      right: 15px;
+      top: -130px; }
+      #advantages .infografika-four .romb .text.top {
+        top: -40px;
+        right: 20px;
+        font-size: 1.4em; }
+        #advantages .infografika-four .romb .text.top span {
+          display: block; }
+        #advantages .infografika-four .romb .text.top:first-child span {
+          padding-left: 20px; }
+        #advantages .infografika-four .romb .text.top span:nth-child(3) {
+          padding-left: 40px; }
+        #advantages .infografika-four .romb .text.top span:last-child {
+          padding-left: 60px; }
+      #advantages .infografika-four .romb .img {
+        margin: 90px 0 0 240px; }
+        #advantages .infografika-four .romb .img.hand {
+          background-position: -600px 0; }
 
 #questions {
   background: url("../../img/main/third-fon.jpg") no-repeat center top/cover; }
