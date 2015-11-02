@@ -75,15 +75,17 @@
     }
   }
   .mebel{
-    width:70%;
+    background:url('../../img/main/mebel.png') no-repeat;
+    width:674px;
+    height:400px;
     margin-top:-100px;
     float:left;
     .title{
-      width:42%;
+      width:275px;
       height:62px;
       position: absolute;
-      top:165px;
-      right:-275px;
+      top:168px;
+      right:-274px;
       text-align: center;
       color: #A42D2E;
       .top{

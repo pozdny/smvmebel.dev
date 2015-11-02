@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="css/style.css">
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
     <script src="js/jquery/jquery-2.1.4.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 <head>
 <body data-target=".scrollspy_menu" data-spy="scroll">
+
     <div id="main">
         <!--header-->
         <header>
@@ -121,19 +123,19 @@
                              </div>
                              <div class="clearfix visible-lg-block"></div>
                               <div class="col-md-12">
-                                <!--<div class="mebel animated fadeInLeft wow delay_5" >
-                                      <img class="img-responsive" alt="" src="img/main/mebel.png">
-                                     <div class="title">
+                                <div class="mebel animated fadeInLeft wow delay_5" >
+                                     <!-- <img class="img-responsive" alt="" src="img/main/mebel.png">-->
+                                     <div class="title hidden-xs hidden-sm">
                                         <div class="top">Корпусная мебель</div>
                                      </div>
-                                </div>-->
+                                </div>
                              </div>
                          </div>
                      </div>
                  </div>
              </div>
         </section>
-        <section class="content-block" id="advantages">
+        <section class="parallax content-block" id="advantages" data-stellar-background-ratio="0.3">
              <div class="bufbg"></div>
              <div class="double-line top-white"><div class="title_white">Преимущества</div> </div>
              <div class="container-fluid">
@@ -153,8 +155,8 @@
                              <div class="romb top">
                                  <div class="text top">
                                      Бесплатная доставка<br>
-                                     <span>по городу</span>
-                                     <span>при заказе</span>
+                                     <span>по городу при заказе</span>
+
                                      <span>от 10000 р.</span>
                                  </div>
                                  <div class="block-white-inner">
@@ -166,13 +168,19 @@
                          <div class="col-xs-12 col-md-6 infografika-three">
                              <div class="romb bottom">
                                  <div class="img hand"></div>
-                                 <div class="text top">  </div>
+                                 <div class="text top">
+                                     <span>Гарантия</span>
+                                     <span>на изделие 1 год</span>
+                                 </div>
                              </div>
                          </div>
                          <div class="col-xs-12 col-md-6 infografika-four">
                              <div class="romb bottom">
                                  <div class="img hand"></div>
-                                 <div class="text top"></div>
+                                 <div class="text top">
+                                     <span>Доставим</span>
+                                     <span>даже 1 стул</span>
+                                 </div>
                              </div>
                          </div>
                      </div>
@@ -183,36 +191,47 @@
              <div class="bufbg"></div>
              <div class="double-line top-red"><div class="title_red">Есть вопросы? Задайте их нам!</div> </div>
              <div class="container-fluid">
-                 <div class="container">Cпособ продаж через Интернет имеет ряд неоспоримых преимуществ, два из которых очень важны в наше время скорости и практичности: во-первых, весь цикл покупки авиабилета займет у покупателя всего 5–10 минут, и, во-вторых, на сайте предлагаются билеты по ценам, уровень которых выгодно отличается от обычных тарифов.
-                     Common crawl
-                     The sale method over the Internet has a number of unquestioned advantages, two of which are very important nowadays at the time of high speeds and practicality: first, the entire purchase cycle will only take 5 to 10 minutes and, second, the site offers tickets for the prices profitably distinct from the usual tariffs.
-                     Было высказано мнение, что с целью расширения участия государств-членов Юридическому подкомитету надлежит рассмотреть вопрос о недостаточно широком понимании преимуществ, связанных с присоединением к договорам Организации Объединенных Наций по космосу
-                     MultiUn
-                     The view was expressed that the lack of awareness of the benefits deriving from adherence to the United Nations treaties on outer space needed to be addressed by the Legal Subcommittee in order to broaden the participation of Member States
-                     Замечания секретариата: Это решение, за которое выступает Европейская комиссия, имеет неоспоримые преимущества и является наиболее эффективным и надежным решением, поскольку в текст приложения IB нельзя будет вносить никакие изменения по существу
-                     MultiUn
-                     Remarks by the secretariat: This solution, supported by the European Commission, has undeniable advantages and would be the most efficient and the safest in that no substantive amendment could be made to the content of Annex
-                     Основное сравнительное преимущество ЮНИДО заключается в ее уникальной способности предоставлять комплексные и интегрированные пакеты услуг, сочетая оперативную деятельность с осуществлением аналитических и нормативных функций, а также функций по созыву совещаний
-                     MultiUn
-                     The key comparative advantage of UNIDO lies in its unique ability to provide comprehensive and integrated packages of services; combining its operational activities with its analytical, normative and convening roles
-                     Сеть экспертов по преимуществам и экономическим инструментам (СЭПЭИ) провела ‧ февраля ‧ года в Лондоне рабочее совещание по измерению и оценке воздействия на здоровье
-                     MultiUn
-                     The Network of Experts on Benefits and Economic Instruments (NEBEI) conducted a workshop on the measurement and valuation of health impacts, in London on ‧ ebruary
-                     Для сравнения с другими региональными комиссиями ниже приводится сводная информация о ресурсах (по текущим расценкам), которые при сохранении преимуществ централизованного руководства и во избежание дублирования усилий будут выделены ЕЭК Отделением Организации Объединенных Наций в Женеве на административное, конференционное и общее обслуживание в течение двухгодичного периода ‧ годов
-                     MultiUn
-                     n order to permit a comparison among regional commissions, while at the same time maintaining the advantages of integrated management and avoiding duplication of effort, the estimated resources (at current rates) to be provided by the United Nations Office at Geneva to ECE for administrative, conference and general services during the biennium ‧ are summarized below
-                     Комиссия по разоружению обладает двойным преимуществом для беспристрастного проведения такого анализа, поскольку, во-первых, она является не директивным, а совещательным органом, а во-вторых,- подлинно многосторонним органом
-                     MultiUn
-                     The Commission has the dual advantage, for the objective conduct of this analytical exercise, of being a forum for the development of ideas rather than decision-making, on the one hand, and of being genuinely multilateral, on the other
-                     Г-н Томми (Организация Объединенных Наций по промышленному развитию) говорит, что ЮНИДО продолжает сосредоточивать свои усилия на областях, где она наглядно продемонстрировала свои сравнительные преимущества и может наилучшим образом внести свой вклад в усилия международного сообщества по содействию устойчивому развитию
-                     MultiUn
-                     Mr. Tommy (United Nations Industrial Development Organization) said that UNIDO had continued to focus on areas in which it had a clearly demonstrated comparative advantage and could best contribute to the international community's efforts to promote sustainable development
-                     В то же время ЮНИСЕФ стал более оперативно реагирующим и стратегическим партнером в достижении целей, сформулированных в Декларации тысячелетия, и целей по обеспечению образования для всех, используя в контексте проводимой деятельности свои сравнительные преимущества в том, что касается решения вопросов, связанных с школьным обучением девочек и поддержкой доступа к образованию в сложных условиях и в маргинальных зонах
-                     MultiUn
-                     Meanwhile, UNICEF has become a more responsive and strategic partner for the Millennial and Education for All (EFA) goals, using its comparative advantage in addressing the schooling of girls and supporting access to education in difficult circumstances and marginalized zones
-                     g) использовать преимущества и возможности, которые открываются за счет координации деятельности с участием вооруженных сил, в контексте ликвидации последствий бедствий по мере необходимости и в самом крайнем случае
-                     MultiUn
-                     g) Make the most of the advantages and opportunities presented by coordinated work involving the armed forces in dealing with and responding to disasters, where appropriate and as a last resort
+                 <div class="container">
+                     <!--<form id="form_sendemail">
+                         <p><input name="login"></p>
+                         <p><input type="submit"></p>
+                     </form>-->
+                     <div id="form_message" class="alert contact-form__alert" role="alert"></div>
+                     <form id="form_sendmail" class="contact__form">
+                         <div class="form-group">
+                             <label for="question">Ваш вопрос*</label>
+                             <textarea class="form-control" rows="3" id="question" name="question" placeholder="Ваш вопрос"></textarea>
+                             <span class="help-block"></span>
+                         </div>
+                         <div class="form-group">
+                             <label for="name">Ваше имя*</label>
+                             <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя">
+                             <span class="help-block"></span>
+                         </div>
+                         <div class="form-group">
+                             <label for="email">Ваш e-mail (для обратной связи)</label>
+                             <input type="email" class="form-control" id="email" name="email" placeholder="Ваш e-mail">
+                             <span class="help-block"></span>
+                         </div>
+                         <div class="form-group">
+                             <label for="phone">Ваш телефон</label>
+                             <input type="text" class="form-control" id="phone" name="phone" placeholder="Ваш телефон">
+                             <span class="help-block"></span>
+                         </div>
+                         <div class="row">
+                             <div class="col-xs-12 info-txt">
+                                 Мы свяжемся с Вами по указанным контактам в ближайшее время
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="col-xs-6 ">captcha
+                                 <!--<div class="g-recaptcha" data-sitekey="6LepFhATAAAAAOaNCpHGXMBpl0m-Qs2PMS9n0jsT"></div>-->
+                             </div>
+                             <div class="col-xs-6">
+                                 <button class="btn btn-send btn-q pull-right" type="submit"> Отправить запрос </button>
+                             </div>
+                         </div>
+                     </form>
                  </div>
              </div>
              <div class="double-line bottom-red"></div>
@@ -227,7 +246,9 @@
                          Ул.Ватутина 71, оф. 403 <br>
                          тел. 8-961-224-01-65
                      </p>
+<!--
                      <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=AcYZ5xAoGwd2yfQGk_TX6Qq8G0zI1SXm&width=100%&height=522&lang=ru_RU&sourceType=constructor"></script>
+-->
                  </div>
              </div>
          </section>
@@ -241,6 +262,6 @@
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/plugins/wow.min.js"></script>
 <script src="js/plugins/jquery.waypoints.min.js"></script>
-<!--<script src="js/plugins/jquery.onepage-scroll.min.js"></script>-->
+<script src="js/plugins/contacts.js"></script>
 <script src="js/scripts.js"></script>
 </html>

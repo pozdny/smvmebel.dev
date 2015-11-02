@@ -30,7 +30,8 @@ body {
   color: #313131;
   background: #EEF3FA;
   position: relative;
-  min-width: 978px;
+  /*min-width:978px;*/
+  min-width: 750px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
   /* The html and body elements cannot have any padding or margin. */ }
 
@@ -42,7 +43,7 @@ body {
   padding-bottom: 0px; }
 
 .container {
-  min-width: 978px;
+  /* min-width: 978px;*/
   max-width: 978px; }
 
 .content-block {
@@ -125,7 +126,7 @@ a {
   .btn.btn-send {
     width: 260px;
     font-size: 2em;
-    background: rgba(128, 34, 34, 0.9);
+    background: rgba(151, 0, 10, 0.9);
     border-color: rgba(128, 34, 34, 0.9); }
     .btn.btn-send:focus {
       border-color: rgba(128, 34, 34, 0.9);
@@ -291,7 +292,7 @@ header .top-content {
       header .top-content .inner-content .header-right .info-line {
         width: 100%;
         height: 130px;
-        margin: 50px 0 0 -175px;
+        margin: 59px 0 0 -175px;
         float: left;
         background: url("../../img/main/header-inner_bg.png") repeat-x;
         -webkit-transform: translate(1px, -10px) skew(-45deg, 0deg);
@@ -1040,15 +1041,17 @@ header .top-content {
       #catalog .chiar-middle.top .title .bottom, #catalog .chiar-middle.bottom .title .bottom {
         height: 28px; }
   #catalog .mebel {
-    width: 70%;
+    background: url("../../img/main/mebel.png") no-repeat;
+    width: 674px;
+    height: 400px;
     margin-top: -100px;
     float: left; }
     #catalog .mebel .title {
-      width: 42%;
+      width: 275px;
       height: 62px;
       position: absolute;
-      top: 165px;
-      right: -275px;
+      top: 168px;
+      right: -274px;
       text-align: center;
       color: #A42D2E; }
       #catalog .mebel .title .top {
@@ -1089,17 +1092,15 @@ header .top-content {
   #advantages .infografika-one .romb {
     left: 15px; }
     #advantages .infografika-one .romb .text {
+      text-align: center;
       margin-left: 200px;
       padding: 20px 0 0 40px; }
-      #advantages .infografika-one .romb .text.top {
-        top: -40px;
-        right: 0px; }
-        #advantages .infografika-one .romb .text.top span {
-          display: block; }
-        #advantages .infografika-one .romb .text.top:first-child span {
-          padding-left: 20px; }
-        #advantages .infografika-one .romb .text.top span:last-child {
-          padding-left: 60px; }
+      #advantages .infografika-one .romb .text.top span {
+        display: block; }
+      #advantages .infografika-one .romb .text.top:first-child span {
+        /*padding-left:40px;*/ }
+      #advantages .infografika-one .romb .text.top span:last-child {
+        /*padding-left:80px;*/ }
     #advantages .infografika-one .romb .img {
       margin: -25px 0 0 65px; }
       #advantages .infografika-one .romb .img.hand {
@@ -1107,21 +1108,24 @@ header .top-content {
   #advantages .infografika-two .romb {
     right: 55px; }
     #advantages .infografika-two .romb .text {
-      margin-left: 170px;
-      padding: 5px 0 0 40px; }
+      text-align: center;
+      margin-left: 190px;
+      padding: 20px 0 0 40px; }
       #advantages .infografika-two .romb .text.top {
-        top: -40px;
-        font-size: 1.4em; }
+        font-size: 1.4em;
+        /*&:first-child span{
+          padding-left:40px;
+        }
+        span:nth-child(3){
+          padding-left:70px;
+        }
+        span:last-child{
+          padding-left:90px;
+        }*/ }
         #advantages .infografika-two .romb .text.top span {
           display: block; }
-        #advantages .infografika-two .romb .text.top:first-child span {
-          padding-left: 40px; }
-        #advantages .infografika-two .romb .text.top span:nth-child(3) {
-          padding-left: 60px; }
-        #advantages .infografika-two .romb .text.top span:last-child {
-          padding-left: 80px; }
     #advantages .infografika-two .romb .img {
-      margin: -30px 0 0 65px; }
+      margin: -10px 0 0 65px; }
       #advantages .infografika-two .romb .img.hand {
         background-position: -200px 0; }
   #advantages .infografika-three {
@@ -1145,17 +1149,11 @@ header .top-content {
       left: 55px;
       top: -130px; }
       #advantages .infografika-three .romb .text.top {
-        top: -40px;
-        right: 20px;
+        text-align: center;
+        margin-left: 40px;
         font-size: 1.4em; }
         #advantages .infografika-three .romb .text.top span {
           display: block; }
-        #advantages .infografika-three .romb .text.top:first-child span {
-          padding-left: 20px; }
-        #advantages .infografika-three .romb .text.top span:nth-child(3) {
-          padding-left: 40px; }
-        #advantages .infografika-three .romb .text.top span:last-child {
-          padding-left: 60px; }
       #advantages .infografika-three .romb .img {
         margin: 90px 0 0 240px; }
         #advantages .infografika-three .romb .img.hand {
@@ -1182,17 +1180,11 @@ header .top-content {
       right: 15px;
       top: -130px; }
       #advantages .infografika-four .romb .text.top {
-        top: -40px;
-        right: 20px;
+        text-align: center;
+        margin-left: 40px;
         font-size: 1.4em; }
         #advantages .infografika-four .romb .text.top span {
           display: block; }
-        #advantages .infografika-four .romb .text.top:first-child span {
-          padding-left: 20px; }
-        #advantages .infografika-four .romb .text.top span:nth-child(3) {
-          padding-left: 40px; }
-        #advantages .infografika-four .romb .text.top span:last-child {
-          padding-left: 60px; }
       #advantages .infografika-four .romb .img {
         margin: 90px 0 0 240px; }
         #advantages .infografika-four .romb .img.hand {
@@ -1202,6 +1194,51 @@ header .top-content {
   background: url("../../img/main/third-fon.jpg") no-repeat center top/cover; }
   #questions .bufbg {
     background: #d7d8d7; }
+  #questions .contact-form__alert {
+    display: none; }
+    #questions .contact-form__alert.alert-success {
+      display: block;
+      margin-bottom: 40px;
+      text-align: center; }
+  #questions form .form-group.has-error .help-block {
+    display: block; }
+  #questions form .help-block {
+    color: #d9534f;
+    display: none; }
+  #questions form .form-control {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 5px solid #d7d8d7;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f4f4+0,dadbda+42,d7d8d7+100 */
+    background: #f5f4f4;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #f5f4f4 0%, #dadbda 42%, #d7d8d7 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f5f4f4), color-stop(42%, #dadbda), color-stop(100%, #d7d8d7));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #f5f4f4 0%, #dadbda 42%, #d7d8d7 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #f5f4f4 0%, #dadbda 42%, #d7d8d7 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #f5f4f4 0%, #dadbda 42%, #d7d8d7 100%);
+    /* IE10+ */
+    background: linear-gradient(135deg, #f5f4f4 0%, #dadbda 42%, #d7d8d7 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f4f4', endColorstr='#d7d8d7',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
+    #questions form .form-control:focus {
+      border-color: #c8c9c8;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(215, 216, 215, 0.6);
+      outline: 0 none; }
+  #questions form label {
+    font-size: 1.2em;
+    color: #aa3d42;
+    font-weight: normal; }
+  #questions .info-txt {
+    color: #aa3d42; }
+  #questions .btn-q {
+    margin-top: 20px; }
 
 #contacts {
   background: url("../../img/main/four-fon.jpg") no-repeat center top/cover; }
@@ -1219,9 +1256,9 @@ header .top-content {
   .container {
     background: purple; } }
 @media (min-width: 768px) {
-  .container {
-    background: gray; }
-
+  /*.container{
+    background: gray;
+  }*/
   .navbar__initial {
     background: transparent none repeat scroll 0 0 !important; }
 

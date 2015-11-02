@@ -51,19 +51,18 @@
     .romb{
       left:15px;
       .text{
+        text-align: center;
         margin-left:200px;
         padding:20px 0 0 40px;
         &.top{
-          top:-40px;
-          right: 0px;
           span{
             display: block;
           }
           &:first-child span{
-            padding-left:20px;
+            /*padding-left:40px;*/
           }
           span:last-child{
-            padding-left:60px;
+            /*padding-left:80px;*/
           }
         }
       }
@@ -80,27 +79,27 @@
     .romb{
       right:55px;
       .text{
-        margin-left:170px;
-        padding:5px 0 0 40px;
+        text-align: center;
+        margin-left:190px;
+        padding:20px 0 0 40px;
         &.top{
-          top:-40px;
           font-size:1.4em;
           span{
             display: block;
           }
-          &:first-child span{
+          /*&:first-child span{
             padding-left:40px;
           }
           span:nth-child(3){
-            padding-left:60px;
+            padding-left:70px;
           }
           span:last-child{
-            padding-left:80px;
-          }
+            padding-left:90px;
+          }*/
         }
       }
       .img {
-        margin:-30px 0 0 65px;
+        margin:-10px 0 0 65px;
         &.hand {
           background-position: -200px 0;
         }
@@ -114,20 +113,11 @@
       top:-130px;
       .text{
         &.top{
-          top:-40px;
-          right: 20px;
+          text-align: center;
+          margin-left: 40px;
           font-size:1.4em;
           span{
             display: block;
-          }
-          &:first-child span{
-            padding-left:20px;
-          }
-          span:nth-child(3){
-            padding-left:40px;
-          }
-          span:last-child{
-            padding-left:60px;
           }
         }
       }
@@ -161,20 +151,11 @@
       top:-130px;
       .text{
         &.top{
-          top:-40px;
-          right: 20px;
+          text-align: center;
+          margin-left: 40px;
           font-size:1.4em;
           span{
             display: block;
-          }
-          &:first-child span{
-            padding-left:20px;
-          }
-          span:nth-child(3){
-            padding-left:40px;
-          }
-          span:last-child{
-            padding-left:60px;
           }
         }
       }

@@ -52,7 +52,8 @@ body {
   color: $base-color;
   background: $base-bg;
   position: relative;
-  min-width:978px;
+  /*min-width:978px;*/
+  min-width: 750px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
   /* The html and body elements cannot have any padding or margin. */
 }
@@ -66,7 +67,7 @@ body {
   padding-bottom: 0px;
 }
 .container {
-  min-width: 978px;
+ /* min-width: 978px;*/
   max-width:978px;
 
 }
@@ -156,7 +157,7 @@ a{
   &.btn-send{
     width:260px;
     font-size:2em;
-    background: rgba(128, 34, 34, 0.9);
+    background: rgba(151, 0, 10, 0.9);
     border-color: rgba(128, 34, 34, 0.9);
     &:focus{
       border-color: rgba(128, 34, 34, 0.9);
