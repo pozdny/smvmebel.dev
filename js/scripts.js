@@ -26,7 +26,7 @@ wow = new WOW(
 wow.init();
 
 $(".btn").on('click', function(e){
-    (e.preventDefault()) ? e.preventDefault() : e.returnValue = false;
+    //(e.preventDefault()) ? e.preventDefault() : e.returnValue = false;
 
 });
 /**

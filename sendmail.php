@@ -38,7 +38,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $msg="Please re-enter your reCAPTCHA.";
     }*/
-
+    $json['error'] = '';
+    $question = $_POST['question'];
+    $name     = $_POST['name'];
+    $email    = $_POST['email'];
+    $phone    = $_POST['phone'];
+    if ((utf8_strlen(trim($question < 1)))) {
+        $json['error']['question'] = 'Заполните поле "Ваш вопрос"';
+    }
+    if ((utf8_strlen(trim($name['name'])) < 1)) {
+        $json['error']['name'] = 'Заполните поле "Ваше имя"';
+    }
+    if(!empty($email['email'])){
+        if ((utf8_strlen($email) > 96) || !preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $email)) {
+            $json['error']['email'] = 'Некорректный формат';
+        }
+    }
+    if ((utf8_strlen($phone) < 15)) {
+        $json['error']['telephone'] = 'Количество символо должно быть не меньше 7';
+    }
+    else{
+        if (!preg_match('/^\+?\d[\d\(\)\ \-\+]{4,15}\d$/', $this->request->post['telephone'])) {
+            $json['error']['telephone'] = $this->language->get('error_telephone');
+        }
+    }
     print_r($_POST);
 
     echo json_encode($json);

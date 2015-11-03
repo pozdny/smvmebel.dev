@@ -135,7 +135,7 @@
                  </div>
              </div>
         </section>
-        <section class="parallax content-block" id="advantages" data-stellar-background-ratio="0.3">
+        <section class="content-block" id="advantages">
              <div class="bufbg"></div>
              <div class="double-line top-white"><div class="title_white">Преимущества</div> </div>
              <div class="container-fluid">
@@ -197,27 +197,28 @@
                          <p><input type="submit"></p>
                      </form>-->
                      <div id="form_message" class="alert contact-form__alert" role="alert"></div>
-                     <form id="form_sendmail" class="contact__form">
+                     <form id="form_sendmail" class="contact__form" role="form">
                          <div class="form-group">
                              <label for="question">Ваш вопрос*</label>
-                             <textarea class="form-control" rows="3" id="question" name="question" placeholder="Ваш вопрос"></textarea>
+                             <textarea class="form-control" rows="3" id="question" name="question" placeholder="Ваш вопрос" maxlength="300" ></textarea>
                              <span class="help-block"></span>
                          </div>
                          <div class="form-group">
                              <label for="name">Ваше имя*</label>
-                             <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя">
+                             <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя" maxlength="50" >
+                             <span class="help-block"></span>
+                         </div>
+                         <div class="form-group">
+                             <label for="phone">Ваш телефон*</label>
+                             <input type="text" class="form-control" id="phone" name="phone" placeholder="Например: +7(913) 949-13-45">
                              <span class="help-block"></span>
                          </div>
                          <div class="form-group">
                              <label for="email">Ваш e-mail (для обратной связи)</label>
-                             <input type="email" class="form-control" id="email" name="email" placeholder="Ваш e-mail">
+                             <input type="email" class="form-control" id="email" name="email" placeholder="Ваш e-mail" maxlength="96" >
                              <span class="help-block"></span>
                          </div>
-                         <div class="form-group">
-                             <label for="phone">Ваш телефон</label>
-                             <input type="text" class="form-control" id="phone" name="phone" placeholder="Ваш телефон">
-                             <span class="help-block"></span>
-                         </div>
+
                          <div class="row">
                              <div class="col-xs-12 info-txt">
                                  Мы свяжемся с Вами по указанным контактам в ближайшее время
@@ -262,6 +263,8 @@
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/plugins/wow.min.js"></script>
 <script src="js/plugins/jquery.waypoints.min.js"></script>
+<script src="js/plugins/jquery.maskedinput.min.js"></script>
+<script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/contacts.js"></script>
 <script src="js/scripts.js"></script>
 </html>
