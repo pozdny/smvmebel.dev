@@ -7,7 +7,7 @@
     display: none;
     &.alert-success {
       display: block;
-      margin-bottom: 40px;
+      margin: 10px 0;
       text-align: center;
     }
   }
@@ -17,14 +17,15 @@
         .help-block {
           display: block;
         }
+
+      }
+      span.error {
+        color: #4d8ef5;
       }
     }
-    .help-block {
-      color: #d9534f;
-      display: none;
-    }
+
     input{
-        height:36px;
+        height:38px;
     }
     .form-control{
       -webkit-border-radius: 0;
@@ -57,7 +58,7 @@
   .info-txt{
     color:#aa3d42;
   }
-  .btn-q{
+  #btn-q{
     margin-top:20px;
   }
 }

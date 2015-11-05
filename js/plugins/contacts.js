@@ -24,7 +24,7 @@ $(document).ready(function(e) {
         return $.trim( value ).length > 0;
     }, "Укажите ваш телефон");
     $.validator.addMethod("onlyLetters", function(value, element, param) {
-        return value.match(/^[�-�� \-]+$/i);
+        return value.match(/^[а-яё \-]+$/i);
     }, "Допустим ввод только символов русского алфавита");
     $.validator.addMethod("minlengthPhone", function(value, element, param) {
         value = value.replace('+7(', '');
@@ -74,12 +74,13 @@ $(document).ready(function(e) {
                 minlength : 2
             },
             phone: {
-                phoneSimbols:true,
+                //phoneSimbols:true,
                 minlengthPhone: 10,
                 maxlengthPhone: 10
             },
             email: {
-                email: true
+                email: true,
+                required:true,
             }
         },
         messages: {
@@ -92,8 +93,8 @@ $(document).ready(function(e) {
             },
 
             email:{
-                email: "Некорректный e-mail"
-
+                email: "Некорректный e-mail",
+                required: "Заполните поле e-mail",
             }
         },
         errorElement: "span",
@@ -106,39 +107,64 @@ $(document).ready(function(e) {
 
         },
         success: function(label) {
-            label.addClass('valid').append($("<i>").attr({class:"fa fa-check"}));
+            //label.addClass('valid').append($("<i>").attr({class:"fa fa-check"}));
 
 
         },
         submitHandler: function() {
-           /* var btn = $('#btnZamerSend');
-            var arr = zamerForm.serializeArray();
-            var url = 'index.php?route=common/contact_form/sendmail';
+            var btn = $('#btn-q');
+            var data = form.serializeArray();
+            var url = 'sendmail.php';
             btn.button('loading');
             $.ajaxSetup({
                 url:url,
                 type: "POST",
                 dataType:"json",
                 cache:false,
-                success: function(data)
-                {
-                    answerMmodal('#myModalZamer', '#myModalZamerAnswer',zamerForm );
 
+            });
+            $.ajax({
+                data: data,
+                beforeSend: function (XMLHttpRequest) {
+                    //
+                    $('.contact__form').fadeTo("slow", 0.33);
+                    $('#form_sendemail .has-error').removeClass('has-error');
+                    $('#form_sendemail .help-block').html('');
+                    $('#form_message').removeClass('alert-success').html('');
+                },
+                success: function(json)
+                {
+                    if (json.error) {
+                        // Error messages
+                        if (json.error.recaptcha) {
+                            $('#form-captcha .error').addClass('has-error');
+                            $('#form-captcha .error').html(json.error.recaptcha);
+                        }
+                    }
+                    // Refresh Captcha
+                    grecaptcha.reset();
+                    //
+                    if (json.success) {
+                        $('#form_message').addClass('alert-success').html(json.success);
+                        form.get(0).reset();
+                        setTimeout(function () {
+                            $('#form_message').removeClass('alert-success').html('');
+                        }, 4000);
+                    }
+
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                    //
+                    $('.contact__form').fadeTo("fast", 1);
                 },
                 error: function(obj, err)
                 {
 
                 }
-            });
-            $.ajax({
-                data:{
-                    action:'zamer',
-                    arr:arr
-                }
             }).always(function () {
-                btn.text('�������� �����').removeClass('disabled').attr({disabled:false});
-
-            });*/
+                btn.text('Отправить запрос').removeClass('disabled').attr({disabled:false});
+                btn.blur();
+            });
         }
     });
     /*

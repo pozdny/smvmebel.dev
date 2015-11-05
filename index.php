@@ -9,11 +9,14 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/plugins/animate.css">
+    <link rel="stylesheet" href="js/jquery/colorbox/colorbox.css">
 <!--    <link rel="stylesheet" href="css/plugins/one-page.css">-->
     <link rel="stylesheet" href="css/style.css">
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
     <script src="js/jquery/jquery-2.1.4.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script  src="js/jquery/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="js/jquery/colorbox/jquery.colorbox.js"></script>
+    <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
 <head>
 <body data-target=".scrollspy_menu" data-spy="scroll">
 
@@ -91,7 +94,8 @@
                          <div class="row">
                              <div class="col-xs-12 col-md-6">
                                  <div class="chiar-small top animated fadeInLeft wow delay_2" >
-                                     <div class="title">
+                                     <div class="modal-cover" type="button"  data-toggle="modal" data-target="#chearEmpl"></div>
+                                     <div class="title" role="button" data-target="#chearEmpl" data-toggle="modal">
                                          <div class="top">Кресла</div>
                                          <div class="bottom">для сотрудников</div>
                                      </div>
@@ -99,6 +103,7 @@
                              </div>
                              <div class="col-xs-12 col-md-6">
                                  <div class="chiar-middle top animated fadeInRight wow delay_3" >
+                                     <div class="modal-cover" role="button" data-target="#chearClients" data-toggle="modal"></div>
                                      <div class="title">
                                          <div class="top">Кресла</div>
                                          <div class="bottom">для посетителей</div>
@@ -108,6 +113,7 @@
                              <div class="clearfix visible-lg-block"></div>
                              <div class="col-xs-12 col-md-6">
                                  <div class="chiar-small bottom animated fadeInLeft wow delay_6" >
+                                     <div class="modal-cover" role="button" data-target="#chearBoss" data-toggle="modal"></div>
                                      <div class="title">
                                          <div class="top">Кресла</div>
                                          <div class="bottom">для начальников</div>
@@ -116,6 +122,7 @@
                              </div>
                             <div class="col-xs-12 col-md-6">
                                  <div class="chiar-middle bottom animated fadeInRight wow delay_4" >
+                                     <div class="modal-cover" role="button" data-target="#chearCouch" data-toggle="modal"></div>
                                      <div class="title">
                                          <div class="top">Диваны и пуфы</div>
                                      </div>
@@ -125,9 +132,13 @@
                               <div class="col-md-12">
                                 <div class="mebel animated fadeInLeft wow delay_5" >
                                      <!-- <img class="img-responsive" alt="" src="img/main/mebel.png">-->
+                                    <div class="modal-cover" role="button" data-target="#corpMebel" data-toggle="modal"></div>
                                      <div class="title hidden-xs hidden-sm">
                                         <div class="top">Корпусная мебель</div>
                                      </div>
+                                    <div class="title2 hidden-md hidden-lg">
+                                        Корпусная мебель
+                                    </div>
                                 </div>
                              </div>
                          </div>
@@ -192,31 +203,23 @@
              <div class="double-line top-red"><div class="title_red">Есть вопросы? Задайте их нам!</div> </div>
              <div class="container-fluid">
                  <div class="container">
-                     <!--<form id="form_sendemail">
-                         <p><input name="login"></p>
-                         <p><input type="submit"></p>
-                     </form>-->
                      <div id="form_message" class="alert contact-form__alert" role="alert"></div>
                      <form id="form_sendmail" class="contact__form" role="form">
                          <div class="form-group">
                              <label for="question">Ваш вопрос*</label>
                              <textarea class="form-control" rows="3" id="question" name="question" placeholder="Ваш вопрос" maxlength="300" ></textarea>
-                             <span class="help-block"></span>
                          </div>
                          <div class="form-group">
                              <label for="name">Ваше имя*</label>
                              <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя" maxlength="50" >
-                             <span class="help-block"></span>
                          </div>
                          <div class="form-group">
-                             <label for="phone">Ваш телефон*</label>
-                             <input type="text" class="form-control" id="phone" name="phone" placeholder="Например: +7(913) 949-13-45">
-                             <span class="help-block"></span>
-                         </div>
-                         <div class="form-group">
-                             <label for="email">Ваш e-mail (для обратной связи)</label>
+                             <label for="email">Ваш e-mail (для обратной связи)*</label>
                              <input type="email" class="form-control" id="email" name="email" placeholder="Ваш e-mail" maxlength="96" >
-                             <span class="help-block"></span>
+                         </div>
+                         <div class="form-group">
+                             <label for="phone">Ваш телефон</label>
+                             <input type="text" class="form-control" id="phone" name="phone" placeholder="Например: +7(913) 949-13-45">
                          </div>
 
                          <div class="row">
@@ -225,11 +228,15 @@
                              </div>
                          </div>
                          <div class="row">
-                             <div class="col-xs-6 ">captcha
-                                 <!--<div class="g-recaptcha" data-sitekey="6LepFhATAAAAAOaNCpHGXMBpl0m-Qs2PMS9n0jsT"></div>-->
+                             <div class="col-xs-6 ">
+                                 <div id="form-captcha" class="form-group">
+                                     <div class="g-recaptcha" data-sitekey="6LepFhATAAAAAOaNCpHGXMBpl0m-Qs2PMS9n0jsT"></div>
+                                     <span class="help-block"></span>
+                                 </div>
+
                              </div>
                              <div class="col-xs-6">
-                                 <button class="btn btn-send btn-q pull-right" type="submit"> Отправить запрос </button>
+                                 <button class="btn btn-send pull-right" id="btn-q" type="submit" data-loading-text="Подождите..."> Отправить запрос </button>
                              </div>
                          </div>
                      </form>
@@ -247,8 +254,8 @@
                          Ул.Ватутина 71, оф. 403 <br>
                          тел. 8-961-224-01-65
                      </p>
-<!--
-                     <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=AcYZ5xAoGwd2yfQGk_TX6Qq8G0zI1SXm&width=100%&height=522&lang=ru_RU&sourceType=constructor"></script>
+
+<!--                     <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=AcYZ5xAoGwd2yfQGk_TX6Qq8G0zI1SXm&width=100%&height=522&lang=ru_RU&sourceType=constructor"></script>
 -->
                  </div>
              </div>
@@ -257,6 +264,36 @@
         <!--/page content-->
     </div>
 
+<!-- MODAL -->
+    <!--Modal Employment-->
+   <div class="modal fade" id="chearEmpl" tabindex="-1" role="dialog" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button class="close" data-dismiss="modal" type="button">×</button>
+                <div class="modal-body">
+                    <div class="product_info">
+                        <div class="product_images">
+                            <div class="main_image">
+                                <a class="colorbox" title="кресло для сотрудников" href="img/catalog/empl/1_1.jpg">
+                                    <div class="zoom">
+                                        <i class="fa fa-search-plus"></i>
+                                    </div>
+                                    <img alt="кресло для сотрудников" src="img/catalog/empl/1.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="right_block">
+                            <h3 class="modal-title">Вызвать замерщика</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Modal Employment-->
+
+<!-- END MODAL -->
+
 
 </body>
 <script src="js/bootstrap/bootstrap.min.js"></script>
@@ -264,7 +301,9 @@
 <script src="js/plugins/wow.min.js"></script>
 <script src="js/plugins/jquery.waypoints.min.js"></script>
 <script src="js/plugins/jquery.maskedinput.min.js"></script>
+<script src="js/plugins/Mmodal.plagin.js"></script>
 <script src="js/plugins/jquery.validate.js"></script>
+
 <script src="js/plugins/contacts.js"></script>
 <script src="js/scripts.js"></script>
 </html>

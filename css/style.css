@@ -30,6 +30,7 @@ body {
   color: #313131;
   background: #EEF3FA;
   position: relative;
+  padding: 0 !important;
   /*min-width:978px;*/
   min-width: 750px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
@@ -91,7 +92,7 @@ a {
   animation-delay: 1s; }
 
 .delay_2 {
-  animation-delay: 0.5s; }
+  animation-delay: 0.6s; }
 
 .delay_3 {
   animation-delay: 0.8s; }
@@ -216,6 +217,95 @@ a {
 .bufbg {
   width: 100%;
   height: 50px; }
+
+/*
+	==================
+	[BACKDROP]
+	==================
+*/
+/*.fade {
+
+  opacity: 0;
+  transition: opacity 0.15s linear 0s;
+}
+.fade.in {
+  opacity: 1;
+}
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0) url("../../img/main/overlay.png") repeat scroll 0 0;
+  opacity: 0.9;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1030;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+}*/
+/*
+	==================
+	[MODAL]
+	==================
+*/
+.modal .modal-dialog {
+  width: 80%;
+  max-width: 948px; }
+  .modal .modal-dialog .modal-content {
+    width: 100%;
+    overflow: hidden;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 3px solid #fff;
+    border-width: 3px; }
+    .modal .modal-dialog .modal-content .close {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      z-index: 3;
+      color: #fff; }
+    .modal .modal-dialog .modal-content .modal-header {
+      border: none;
+      padding: 5px; }
+      .modal .modal-dialog .modal-content .modal-header h3 {
+        text-align: center;
+        font-family: 'Calibri_Bold'; }
+    .modal .modal-dialog .modal-content .modal-body {
+      width: 100%;
+      float: left;
+      font-size: 1.2em;
+      padding: 5px;
+      z-index: 2;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947a7d+0,a5a5a5+50,937477+100 */
+      background: #947a7d;
+      /* Old browsers */
+      background: -moz-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #947a7d), color-stop(50%, #a5a5a5), color-stop(100%, #937477));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+      /* IE10+ */
+      background: linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#947a7d', endColorstr='#937477',GradientType=1 );
+      /* IE6-9 fallback on horizontal gradient */ }
+
+.modal-open {
+  overflow: auto; }
+
+.modal {
+  overflow-y: auto;
+  position: fixed;
+  padding-right: 0 !important; }
 
 header .top-content {
   background: url("../../img/main/header-fon.jpg") no-repeat center top/cover;
@@ -989,12 +1079,20 @@ header .top-content {
     background: #d7d8d7; }
   #catalog .chiar-small, #catalog .chiar-middle, #catalog .mebel {
     font-size: 1.6em; }
+    #catalog .chiar-small.top .title:hover, #catalog .chiar-small.bottom .title:hover, #catalog .chiar-middle.top .title:hover, #catalog .chiar-middle.bottom .title:hover, #catalog .mebel.top .title:hover, #catalog .mebel.bottom .title:hover {
+      color: #411112; }
+    #catalog .chiar-small .modal-cover:hover, #catalog .chiar-middle .modal-cover:hover, #catalog .mebel .modal-cover:hover {
+      cursor: pointer; }
   #catalog .chiar-small {
     background: url("../../img/main/chiar-small.png") no-repeat;
     width: 332px;
     height: 283px;
     position: relative;
     float: left; }
+    #catalog .chiar-small .modal-cover {
+      position: absolute;
+      width: 250px;
+      height: 283px; }
     #catalog .chiar-small.top {
       background-position: 0 0; }
     #catalog .chiar-small.bottom {
@@ -1020,6 +1118,11 @@ header .top-content {
     height: 283px;
     margin-bottom: 10px;
     float: right; }
+    #catalog .chiar-middle .modal-cover {
+      position: absolute;
+      width: 380px;
+      height: 283px;
+      right: 0; }
     #catalog .chiar-middle.top {
       background-position: 0 0;
       margin-top: 110px; }
@@ -1046,6 +1149,10 @@ header .top-content {
     height: 400px;
     margin-top: -100px;
     float: left; }
+    #catalog .mebel .modal-cover {
+      position: absolute;
+      width: 500px;
+      height: 400px; }
     #catalog .mebel .title {
       width: 275px;
       height: 62px;
@@ -1054,12 +1161,77 @@ header .top-content {
       right: -274px;
       text-align: center;
       color: #A42D2E; }
+      #catalog .mebel .title:hover {
+        color: #411112; }
       #catalog .mebel .title .top {
         border: 2px solid #A42D2E;
         border-width: 0 0 2px 0;
         height: 32px; }
       #catalog .mebel .title .bottom {
         height: 28px; }
+    #catalog .mebel .title2 {
+      width: 275px;
+      height: 62px;
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      text-align: center;
+      color: #A42D2E; }
+
+.modal .product_info {
+  width: 100%;
+  float: left;
+  position: relative; }
+  .modal .product_info .right_block {
+    float: left;
+    width: 554px;
+    background: yellow; }
+  .modal .product_info .product_images {
+    -webkit-box-shadow: 4px 4px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 4px 4px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 4px 4px 2px 0px rgba(50, 50, 50, 0.75);
+    float: left;
+    position: relative; }
+    .modal .product_info .product_images .main_image {
+      background-color: white;
+      border: 1px solid #e7e7e7;
+      height: 252px;
+      /*margin-bottom: 13px;*/
+      margin-left: 0;
+      position: relative;
+      text-align: center;
+      width: 291px; }
+      .modal .product_info .product_images .main_image:hover {
+        cursor: pointer; }
+        .modal .product_info .product_images .main_image:hover .zoom {
+          opacity: 1; }
+      .modal .product_info .product_images .main_image .colorbox {
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 2; }
+        .modal .product_info .product_images .main_image .colorbox img {
+          margin: 0 auto;
+          position: relative; }
+      .modal .product_info .product_images .main_image .zoom {
+        background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+        min-height: 100%;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        transition: opacity 0.3s ease 0s;
+        width: 100%;
+        z-index: 1; }
+        .modal .product_info .product_images .main_image .zoom .fa-search-plus {
+          color: #ccc;
+          font-size: 2em;
+          left: 45%;
+          opacity: 1;
+          position: absolute;
+          top: 45%;
+          z-index: 3; }
 
 #advantages {
   background: url("../../img/main/second-fon.jpg") no-repeat fixed center top/cover; }
@@ -1198,15 +1370,14 @@ header .top-content {
     display: none; }
     #questions .contact-form__alert.alert-success {
       display: block;
-      margin-bottom: 40px;
+      margin: 10px 0;
       text-align: center; }
   #questions form .form-group.has-error .help-block {
     display: block; }
-  #questions form .help-block {
-    color: #d9534f;
-    display: none; }
+  #questions form .form-group span.error {
+    color: #4d8ef5; }
   #questions form input {
-    height: 36px; }
+    height: 38px; }
   #questions form .form-control {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -1239,7 +1410,7 @@ header .top-content {
     font-weight: normal; }
   #questions .info-txt {
     color: #aa3d42; }
-  #questions .btn-q {
+  #questions #btn-q {
     margin-top: 20px; }
 
 #contacts {

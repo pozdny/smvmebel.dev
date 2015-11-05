@@ -20,11 +20,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $url = $google_url."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
         $res = getCurlData($url);
         $res = json_decode($res, true);
-        //reCaptcha введена
+        //reCaptcha РІРІРµРґРµРЅР°
         if($res['success'])
         {
             echo '123';
-            // Продолжаем проверку данных формы
+            //
         }
         else
         {
@@ -39,31 +39,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $msg="Please re-enter your reCAPTCHA.";
     }*/
     $json['error'] = '';
-    $question = $_POST['question'];
-    $name     = $_POST['name'];
-    $email    = $_POST['email'];
+    $question = trim($_POST['question']);
+    $name     = trim($_POST['name']);
+    $email    = trim($_POST['email']);
     $phone    = $_POST['phone'];
-    if ((utf8_strlen(trim($question < 1)))) {
-        $json['error']['question'] = 'Заполните поле "Ваш вопрос"';
-    }
-    if ((utf8_strlen(trim($name['name'])) < 1)) {
-        $json['error']['name'] = 'Заполните поле "Ваше имя"';
-    }
-    if(!empty($email['email'])){
-        if ((utf8_strlen($email) > 96) || !preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $email)) {
-            $json['error']['email'] = 'Некорректный формат';
-        }
-    }
-    if ((utf8_strlen($phone) < 15)) {
-        $json['error']['telephone'] = 'Количество символо должно быть не меньше 7';
-    }
-    else{
-        if (!preg_match('/^\+?\d[\d\(\)\ \-\+]{4,15}\d$/', $this->request->post['telephone'])) {
-            $json['error']['telephone'] = $this->language->get('error_telephone');
-        }
-    }
-    print_r($_POST);
+    $to = 'pozdny@mail.ru'.', '; // РЈРєР°Р¶РёС‚Рµ Рµ-mail, РЅР° РєРѕС‚РѕСЂС‹Р№ РІС‹ Р¶РµР»Р°РµС‚Рµ РїРѕР»СѓС‡Р°С‚СЊ Р·Р°РєР°Р·С‹
+    $to.= 'ppozdny@gmail.com';
 
-    echo json_encode($json);
+    $site_name   = 'smvmebel.ru';
+    $site_email  = 'pozdny@mail.ru';
+
+    $subject = "=?utf-8?B?" . base64_encode("Р—Р°РїСЂРѕСЃ СЃ СЃР°Р№С‚Р° ".$site_name) . "?=";
+    $message = '<html>
+<head>
+        <title>РџРѕСЃРµС‚РёС‚РµСЃСЊ Р’Р°С€РµРіРѕ СЃР°Р№С‚Р° РѕС‚РїСЂР°РІРёР» СЃР»РµРґСѓСЋС‰РёРµ РґР°РЅРЅС‹Рµ:</title>
+</head>
+<body>
+    <table style="border-collapse: collapse; width: 50%; border-top: 1px solid #DDDDDD; border-left: 1px solid #DDDDDD; margin-bottom: 20px;">
+   <tr><td style="border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; padding: 7px; font-weight: bold; ">РРјСЏ:</td><td style="border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #FFFFFF; padding: 7px;">'.$name.'</td></tr>
+    <tr><td style="border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; padding: 7px; font-weight: bold; ">РўРµР»РµС„РѕРЅ:</td><td style="border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #FFFFFF; padding: 7px;">'.$phone.'</td></tr>
+   <tr><td style="border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; padding: 7px; font-weight: bold; ">E-mail:</td><td style="border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #FFFFFF; padding: 7px;">'.$email.'</td></tr>
+   <tr><td style="border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; padding: 7px; font-weight: bold; ">Р’РѕРїСЂРѕСЃ:</td><td style="border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #FFFFFF; padding: 7px;">'.$question.'</td></tr>
+   </table>
+</body>
+</html>';
+
+
+$header   = "From: \"{$site_name}\" <{$site_email}>\n";
+$header.= "Content-type: text/html; charset=\"utf-8\"";
+mail($to, $subject, $message, $header);
+$json["success"] = "Р’Р°С€Рµ СЃРѕРѕР±С‰РµРЅРёРµ Р±С‹Р»Рѕ РѕС‚РїСЂР°РІР»РµРЅРѕ!";
+echo json_encode($json);
 
 }

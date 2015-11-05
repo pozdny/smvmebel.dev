@@ -5,6 +5,19 @@
   }
   .chiar-small, .chiar-middle, .mebel{
     font-size: 1.6em;
+    &.top, &.bottom{
+      .title{
+        &:hover{
+          color: #411112;
+        }
+      }
+    }
+    .modal-cover{
+      &:hover{
+        cursor:pointer;
+
+      }
+    }
   }
   .chiar-small{
     background:url('../../img/main/chiar-small.png') no-repeat;
@@ -12,6 +25,11 @@
     height:283px;
     position: relative;
     float:left;
+    .modal-cover{
+      position:absolute;
+      width:250px;
+      height:283px;
+    }
     &.top{
       background-position: 0 0;
 
@@ -29,6 +47,7 @@
         right:-195px;
         text-align: center;
         color: #A42D2E;
+
         .top{
           border:2px solid #A42D2E;
           border-width: 0 0 2px 0;
@@ -46,6 +65,12 @@
     height:283px;
     margin-bottom:10px;
     float:right;
+    .modal-cover{
+      position:absolute;
+      width:380px;
+      height:283px;
+      right:0;
+    }
     &.top{
       background-position: 0 0;
       margin-top:110px;
@@ -80,6 +105,11 @@
     height:400px;
     margin-top:-100px;
     float:left;
+    .modal-cover{
+      position:absolute;
+      width:500px;
+      height:400px;
+    }
     .title{
       width:275px;
       height:62px;
@@ -88,13 +118,90 @@
       right:-274px;
       text-align: center;
       color: #A42D2E;
+      &:hover{
+        color: #411112;
+      }
       .top{
         border:2px solid #A42D2E;
         border-width: 0 0 2px 0;
         height:32px;
+
       }
       .bottom{
         height:28px;
+      }
+    }
+    .title2{
+      width:275px;
+      height:62px;
+      position: absolute;
+      top:10px;
+      right:180px;
+      text-align: center;
+      color: #A42D2E;
+    }
+  }
+}
+.modal{
+  .product_info{
+    width:100%;
+    float:left;
+    position:relative;
+    .right_block{
+      float: left;
+      width: 554px;
+      background:yellow;
+    }
+    .product_images{
+      @include box-shadow(4px 4px 2px 0px rgba(50, 50, 50, 0.75));
+      float:left;
+      position: relative;
+      .main_image{
+        background-color: white;
+        border: 1px solid #e7e7e7;
+        height: 252px;
+        /*margin-bottom: 13px;*/
+        margin-left: 0;
+        position: relative;
+        text-align: center;
+        width: 291px;
+        &:hover{
+          cursor: pointer;
+          .zoom{
+            opacity: 1;
+          }
+        }
+        .colorbox{
+          display: block;
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          z-index: 2;
+          img {
+            margin: 0 auto;
+            position: relative;
+          }
+        }
+        .zoom {
+          background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+          min-height: 100%;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          text-align: center;
+          transition: opacity 0.3s ease 0s;
+          width: 100%;
+          z-index: 1;
+          .fa-search-plus {
+            color: #ccc;
+            font-size: 2em;
+            left: 45%;
+            opacity: 1;
+            position: absolute;
+            top: 45%;
+            z-index: 3;
+          }
+        }
       }
     }
   }
