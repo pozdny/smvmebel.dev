@@ -35,12 +35,20 @@ $(function() {
         height: 'auto',
         delay: 500
     });*/
-    $('.colorbox').colorbox({
-        overlayClose: true,
-        opacity: 0.5,
-        rel: "colorbox"
-    });
 
+    $(".product_ajax_link").fancybox({
+        type: 'ajax',
+        afterShow: function(current, previous) {
+            /*$('#product_info .slider11').bxSlider({
+                slideWidth: 200,
+                minSlides: 3,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideMargin: 1
+            });*/
+        }
+    });
+    $('.fancybox').fancybox();
     /**
      * scrollspy
      */

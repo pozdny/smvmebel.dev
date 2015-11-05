@@ -9,6 +9,7 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/plugins/animate.css">
+    <link rel="stylesheet" href="css/plugins/jquery.fancybox.css">
     <link rel="stylesheet" href="js/jquery/colorbox/colorbox.css">
 <!--    <link rel="stylesheet" href="css/plugins/one-page.css">-->
     <link rel="stylesheet" href="css/style.css">
@@ -94,7 +95,7 @@
                          <div class="row">
                              <div class="col-xs-12 col-md-6">
                                  <div class="chiar-small top animated fadeInLeft wow delay_2" >
-                                     <div class="modal-cover" type="button"  data-toggle="modal" data-target="#chearEmpl"></div>
+                                     <div class="modal-cover product_ajax_link" href="templates/chear_empl.tpl"></div>
                                      <div class="title" role="button" data-target="#chearEmpl" data-toggle="modal">
                                          <div class="top">Кресла</div>
                                          <div class="bottom">для сотрудников</div>
@@ -264,35 +265,6 @@
         <!--/page content-->
     </div>
 
-<!-- MODAL -->
-    <!--Modal Employment-->
-   <div class="modal fade" id="chearEmpl" tabindex="-1" role="dialog" >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button class="close" data-dismiss="modal" type="button">×</button>
-                <div class="modal-body">
-                    <div class="product_info">
-                        <div class="product_images">
-                            <div class="main_image">
-                                <a class="colorbox" title="кресло для сотрудников" href="img/catalog/empl/1_1.jpg">
-                                    <div class="zoom">
-                                        <i class="fa fa-search-plus"></i>
-                                    </div>
-                                    <img alt="кресло для сотрудников" src="img/catalog/empl/1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="right_block">
-                            <h3 class="modal-title">Вызвать замерщика</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/Modal Employment-->
-
-<!-- END MODAL -->
 
 
 </body>
@@ -303,7 +275,7 @@
 <script src="js/plugins/jquery.maskedinput.min.js"></script>
 <script src="js/plugins/Mmodal.plagin.js"></script>
 <script src="js/plugins/jquery.validate.js"></script>
-
+<script src="js/plugins/jquery.fancybox.pack.js"></script>
 <script src="js/plugins/contacts.js"></script>
 <script src="js/scripts.js"></script>
 </html>
