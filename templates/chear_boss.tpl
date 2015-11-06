@@ -4,7 +4,7 @@
             <div class="product_info">
                 <div class="product_images">
                     <div class="main_image">
-                        <a class="colorbox" title="Кресла для сотрудников" href="img/catalog/empl/big/1.jpg">
+                        <a class="colorbox" title="Кресла для начальников" href="img/catalog/empl/big/1.jpg">
                             <div class="zoom">
                                 <i class="fa fa-search-plus"></i>
                             </div>
@@ -28,7 +28,7 @@
 
                 </div>
                 <div class="right_block">
-                    <h3 class="modal-title">Кресла для сотрудников</h3>
+                    <h3 class="modal-title">Кресла для начальников</h3>
                     <p>
                         В общем, если вас очень беспокоит, что текстовый контент с вашего сайта разворовывается, то следует воспользоваться этим инструментом,
                         чтобы Яндекс считал ваш сайт первоисточником. Но что это конкретно даёт сайту, в официальной справке всё же не сказано.
@@ -42,7 +42,7 @@
                 <button class="btn btn-send" id="btn-order">Предварительный заказ</button>
             </div>
             <div class="price_list">
-                <h3 class="modal-title">Прайс-лист на модели кресел для сотрудников</h3>
+                <h3 class="modal-title">Прайс-лист на модели кресел для начальников</h3>
                 <table class="table table-bordered table-striped table-condensed">
                     <thead>
                     <tr>

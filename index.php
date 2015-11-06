@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/plugins/animate.css">
     <link rel="stylesheet" href="css/plugins/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/plugins/jquery.bxslider.css">
     <link rel="stylesheet" href="js/jquery/colorbox/colorbox.css">
 <!--    <link rel="stylesheet" href="css/plugins/one-page.css">-->
     <link rel="stylesheet" href="css/style.css">
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
     <script src="js/jquery/jquery-2.1.4.min.js"></script>
     <script  src="js/jquery/jquery.easing.1.3.js" type="text/javascript"></script>
-    <script src="js/jquery/colorbox/jquery.colorbox.js"></script>
+
     <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
 <head>
 <body data-target=".scrollspy_menu" data-spy="scroll">
@@ -96,7 +97,7 @@
                              <div class="col-xs-12 col-md-6">
                                  <div class="chiar-small top animated fadeInLeft wow delay_2" >
                                      <div class="modal-cover product_ajax_link" href="templates/chear_empl.tpl"></div>
-                                     <div class="title" role="button" data-target="#chearEmpl" data-toggle="modal">
+                                     <div class="title product_ajax_link" href="templates/chear_empl.tpl">
                                          <div class="top">Кресла</div>
                                          <div class="bottom">для сотрудников</div>
                                      </div>
@@ -104,8 +105,8 @@
                              </div>
                              <div class="col-xs-12 col-md-6">
                                  <div class="chiar-middle top animated fadeInRight wow delay_3" >
-                                     <div class="modal-cover" role="button" data-target="#chearClients" data-toggle="modal"></div>
-                                     <div class="title">
+                                     <div class="modal-cover product_ajax_link" href="templates/chear_clients.tpl"></div>
+                                     <div class="title product_ajax_link" href="templates/chear_clients.tpl">
                                          <div class="top">Кресла</div>
                                          <div class="bottom">для посетителей</div>
                                      </div>
@@ -114,8 +115,8 @@
                              <div class="clearfix visible-lg-block"></div>
                              <div class="col-xs-12 col-md-6">
                                  <div class="chiar-small bottom animated fadeInLeft wow delay_6" >
-                                     <div class="modal-cover" role="button" data-target="#chearBoss" data-toggle="modal"></div>
-                                     <div class="title">
+                                     <div class="modal-cover product_ajax_link" href="templates/chear_boss.tpl"></div>
+                                     <div class="title product_ajax_link" href="templates/chear_boss.tpl">
                                          <div class="top">Кресла</div>
                                          <div class="bottom">для начальников</div>
                                      </div>
@@ -123,8 +124,8 @@
                              </div>
                             <div class="col-xs-12 col-md-6">
                                  <div class="chiar-middle bottom animated fadeInRight wow delay_4" >
-                                     <div class="modal-cover" role="button" data-target="#chearCouch" data-toggle="modal"></div>
-                                     <div class="title">
+                                     <div class="modal-cover product_ajax_link" href="templates/chear_sofa.tpl"></div>
+                                     <div class="title product_ajax_link" href="templates/chear_sofa.tpl">
                                          <div class="top">Диваны и пуфы</div>
                                      </div>
                                  </div>
@@ -133,11 +134,11 @@
                               <div class="col-md-12">
                                 <div class="mebel animated fadeInLeft wow delay_5" >
                                      <!-- <img class="img-responsive" alt="" src="img/main/mebel.png">-->
-                                    <div class="modal-cover" role="button" data-target="#corpMebel" data-toggle="modal"></div>
-                                     <div class="title hidden-xs hidden-sm">
+                                    <div class="modal-cover product_ajax_link" href="templates/mebel.tpl"></div>
+                                     <div class="title hidden-xs hidden-sm product_ajax_link" href="templates/mebel.tpl">
                                         <div class="top">Корпусная мебель</div>
                                      </div>
-                                    <div class="title2 hidden-md hidden-lg">
+                                    <div class="title2 hidden-md hidden-lg product_ajax_link" href="templates/mebel.tpl">
                                         Корпусная мебель
                                     </div>
                                 </div>
@@ -274,6 +275,8 @@
 <script src="js/plugins/jquery.waypoints.min.js"></script>
 <script src="js/plugins/jquery.maskedinput.min.js"></script>
 <script src="js/plugins/Mmodal.plagin.js"></script>
+<script src="js/jquery/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/plugins/jquery.bxslider.js"></script>
 <script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/jquery.fancybox.pack.js"></script>
 <script src="js/plugins/contacts.js"></script>

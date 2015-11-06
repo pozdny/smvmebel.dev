@@ -30,7 +30,6 @@ body {
   color: #313131;
   background: #EEF3FA;
   position: relative;
-  padding: 0 !important;
   /*min-width:978px;*/
   min-width: 750px;
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
@@ -223,30 +222,29 @@ a {
 	[BACKDROP]
 	==================
 */
-/*.fade {
-
+.fade {
   opacity: 0;
-  transition: opacity 0.15s linear 0s;
-}
+  transition: opacity 0.15s linear 0s; }
+
 .fade.in {
-  opacity: 1;
-}
+  opacity: 1; }
+
 .modal-backdrop {
-  background: rgba(0, 0, 0, 0) url("../../img/main/overlay.png") repeat scroll 0 0;
+  background: transparent url("../../img/main/overlay.png") repeat scroll 0 0;
   opacity: 0.9;
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1030;
-}
+  z-index: 1030; }
+
 .modal-backdrop.fade {
-  opacity: 0;
-}
+  opacity: 0; }
+
 .modal-backdrop.in {
-  opacity: 0.5;
-}*/
+  opacity: 0.5; }
+
 /*
 	==================
 	[MODAL]
@@ -430,6 +428,9 @@ header .top-content {
           padding-left: 160px; }
         header .top-content .inner-content .header-right .slogan-text span:last-child {
           padding-left: 80px; }
+
+.fancybox-lock .navbar {
+  margin-right: 0px; }
 
 .navbar {
   border-width: 0;
@@ -1081,7 +1082,7 @@ header .top-content {
     font-size: 1.6em; }
     #catalog .chiar-small.top .title:hover, #catalog .chiar-small.bottom .title:hover, #catalog .chiar-middle.top .title:hover, #catalog .chiar-middle.bottom .title:hover, #catalog .mebel.top .title:hover, #catalog .mebel.bottom .title:hover {
       color: #411112; }
-    #catalog .chiar-small .modal-cover:hover, #catalog .chiar-middle .modal-cover:hover, #catalog .mebel .modal-cover:hover {
+    #catalog .chiar-small .modal-cover:hover, #catalog .chiar-small .product_ajax_link:hover, #catalog .chiar-middle .modal-cover:hover, #catalog .chiar-middle .product_ajax_link:hover, #catalog .mebel .modal-cover:hover, #catalog .mebel .product_ajax_link:hover {
       cursor: pointer; }
   #catalog .chiar-small {
     background: url("../../img/main/chiar-small.png") no-repeat;
@@ -1179,95 +1180,168 @@ header .top-content {
       color: #A42D2E; }
 
 .fancybox-wrap {
-  width: 80% !important;
+  width: 75% !important;
   max-width: 948px; }
   .fancybox-wrap .fancybox-skin {
-    background: yellow;
+    background: #d9d6d3;
     padding: 3px !important;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0; }
     .fancybox-wrap .fancybox-skin .fancybox-inner {
       width: 100% !important; }
-      .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog {
-        background: red; }
-        .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body {
+      .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body {
+        width: 100%;
+        float: left;
+        font-size: 1.2em;
+        padding: 15px;
+        z-index: 2;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947a7d+0,a5a5a5+50,937477+100 */
+        background: #947a7d;
+        /* Old browsers */
+        background: -moz-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #947a7d), color-stop(50%, #a5a5a5), color-stop(100%, #937477));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+        /* IE10+ */
+        background: linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#947a7d', endColorstr='#937477',GradientType=1 );
+        /* IE6-9 fallback on horizontal gradient */ }
+        .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info {
           width: 100%;
           float: left;
-          font-size: 1.2em;
-          padding: 5px;
-          z-index: 2;
-          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947a7d+0,a5a5a5+50,937477+100 */
-          background: #947a7d;
-          /* Old browsers */
-          background: -moz-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-          /* FF3.6+ */
-          background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #947a7d), color-stop(50%, #a5a5a5), color-stop(100%, #937477));
-          /* Chrome,Safari4+ */
-          background: -webkit-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-          /* Chrome10+,Safari5.1+ */
-          background: -o-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-          /* Opera 11.10+ */
-          background: -ms-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-          /* IE10+ */
-          background: linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-          /* W3C */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#947a7d', endColorstr='#937477',GradientType=1 );
-          /* IE6-9 fallback on horizontal gradient */ }
-          .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info {
-            width: 100%;
+          position: relative; }
+          .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .right_block {
+            margin-left: 350px;
+            color: #fff; }
+          .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images {
+            width: 343px;
             float: left;
             position: relative; }
-            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .right_block {
-              float: left;
-              width: 554px;
-              background: yellow; }
-            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images {
+            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image {
+              background-color: white;
               -webkit-box-shadow: 4px 4px 2px 0px rgba(50, 50, 50, 0.75);
               -moz-box-shadow: 4px 4px 2px 0px rgba(50, 50, 50, 0.75);
               box-shadow: 4px 4px 2px 0px rgba(50, 50, 50, 0.75);
-              float: left;
-              position: relative; }
-              .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image {
-                background-color: white;
-                border: 1px solid #e7e7e7;
-                height: 252px;
-                /*margin-bottom: 13px;*/
-                margin-left: 0;
-                position: relative;
+              border: 1px solid #e7e7e7;
+              height: 252px;
+              /*margin-bottom: 13px;*/
+              margin: 0 auto;
+              position: relative;
+              text-align: center;
+              width: 291px; }
+              .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image:hover {
+                cursor: pointer; }
+                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image:hover .zoom {
+                  opacity: 1; }
+              .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image .colorbox {
+                display: block;
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                z-index: 2; }
+                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image .colorbox img {
+                  margin: 0 auto;
+                  position: relative; }
+              .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image .zoom {
+                background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+                min-height: 100%;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
                 text-align: center;
-                width: 291px; }
-                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image:hover {
-                  cursor: pointer; }
-                  .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image:hover .zoom {
-                    opacity: 1; }
-                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image .colorbox {
-                  display: block;
-                  height: 100%;
+                transition: opacity 0.3s ease 0s;
+                width: 100%;
+                z-index: 1; }
+                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image .zoom .fa-search-plus {
+                  color: #ccc;
+                  font-size: 2em;
+                  left: 45%;
+                  opacity: 1;
                   position: absolute;
-                  width: 100%;
-                  z-index: 2; }
-                  .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image .colorbox img {
-                    margin: 0 auto;
-                    position: relative; }
-                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image .zoom {
-                  background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
-                  min-height: 100%;
-                  opacity: 0;
-                  overflow: hidden;
-                  position: absolute;
-                  text-align: center;
-                  transition: opacity 0.3s ease 0s;
-                  width: 100%;
-                  z-index: 1; }
-                  .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .main_image .zoom .fa-search-plus {
-                    color: #ccc;
-                    font-size: 2em;
-                    left: 45%;
-                    opacity: 1;
-                    position: absolute;
-                    top: 45%;
-                    z-index: 3; }
+                  top: 45%;
+                  z-index: 3; }
+            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional {
+              height: 94px;
+              overflow: hidden;
+              margin-top: 10px; }
+              .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper {
+                width: 260px; }
+                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper .bx-viewport {
+                  background-color: inherit !important;
+                  border: medium none !important;
+                  box-shadow: none !important;
+                  height: 85px !important;
+                  left: 5px; }
+                  .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper .bx-viewport .slider .slide {
+                    background-color: white;
+                    border: 1px solid #e7e7e7;
+                    height: 75px !important;
+                    margin: 0 12px 0 0 !important;
+                    width: 75px !important;
+                    text-align: center;
+                    -webkit-box-shadow: 3px 3px 2px 0px rgba(50, 50, 50, 0.75);
+                    -moz-box-shadow: 3px 3px 2px 0px rgba(50, 50, 50, 0.75);
+                    box-shadow: 3px 3px 2px 0px rgba(50, 50, 50, 0.75); }
+                    .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper .bx-viewport .slider .slide img {
+                      margin: 0 auto;
+                      height: 100%; }
+                    .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper .bx-viewport .slider .slide:hover {
+                      cursor: pointer; }
+                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper .bx-prev, .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper .bx-next {
+                  width: 42px;
+                  height: 75px;
+                  background: transparent url("plugins/images/prev-next-btn.png") no-repeat;
+                  display: inline !important; }
+                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper .bx-prev {
+                  background-position: 0 0;
+                  top: 28px !important;
+                  left: -40px; }
+                .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .product_info .product_images .image-additional .bx-wrapper .bx-next {
+                  background-position: -42px 0;
+                  top: 28px !important;
+                  right: -40px; }
+        .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .btn-block {
+          float: left;
+          border: 1px solid #e7e7e7;
+          border-width: 0 0 1px 0; }
+          .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .btn-block #btn-order {
+            float: right;
+            font-size: 1em;
+            margin-bottom: 10px; }
+        .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list {
+          width: 100%;
+          float: left; }
+          .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list .modal-title {
+            color: #fff;
+            text-align: center;
+            margin: 5px 0; }
+          .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list table {
+            width: 85%;
+            margin: 0 auto; }
+            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list table.table-striped > tbody > tr:nth-of-type(2n+1) td {
+              background-color: #e2e2e2; }
+            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list table.table-bordered {
+              border: 5px solid #454545; }
+            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list table > thead > tr th {
+              background: #454545;
+              color: #fff;
+              font-weight: normal;
+              border: 1px solid #454545; }
+            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list table > thead > tr th:last-child {
+              width: 200px;
+              text-align: right; }
+            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list table > tbody > tr td {
+              background: #d9d6d3;
+              border: 1px solid #454545; }
+            .fancybox-wrap .fancybox-skin .fancybox-inner #modal-catalog .content .modal-body .price_list table > tbody > tr td:last-child {
+              text-align: right; }
 
 #advantages {
   background: url("../../img/main/second-fon.jpg") no-repeat fixed center top/cover; }

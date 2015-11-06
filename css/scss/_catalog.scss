@@ -12,7 +12,7 @@
         }
       }
     }
-    .modal-cover{
+    .modal-cover, .product_ajax_link{
       &:hover{
         cursor:pointer;
 
@@ -142,14 +142,13 @@
     }
   }
 }
-.modal{
 
-}
+
 .fancybox-wrap{
-  width:80% !important;
+  width:75% !important;
   max-width:948px;
   .fancybox-skin{
-    background:yellow;
+    background:#d9d6d3;
     padding:3px !important;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -157,13 +156,12 @@
     .fancybox-inner{
       width:100% !important;
       #modal-catalog{
-        background:red;
         .content {
           .modal-body{
             width:100%;
             float:left;
             font-size: 1.2em;
-            padding:5px;
+            padding:15px;
             z-index:2;
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947a7d+0,a5a5a5+50,937477+100 */
             background: #947a7d; /* Old browsers */
@@ -178,21 +176,23 @@
               width:100%;
               float:left;
               position:relative;
+
               .right_block{
-                float: left;
-                width: 554px;
-                background:yellow;
+                margin-left: 350px;
+                color:#fff;
               }
               .product_images{
-                @include box-shadow(4px 4px 2px 0px rgba(50, 50, 50, 0.75));
+                width: 343px;
                 float:left;
                 position: relative;
                 .main_image{
                   background-color: white;
+                  @include box-shadow(4px 4px 2px 0px rgba(50, 50, 50, 0.75));
                   border: 1px solid #e7e7e7;
                   height: 252px;
                   /*margin-bottom: 13px;*/
-                  margin-left: 0;
+                  margin: 0 auto;
+
                   position: relative;
                   text-align: center;
                   width: 291px;
@@ -234,7 +234,111 @@
                     }
                   }
                 }
+                .image-additional {
+                  height: 94px;
+                  overflow: hidden;
+                  margin-top:10px;
+                  .bx-wrapper {
+                    width: 260px;
+                    .bx-viewport {
+                      background-color: inherit !important;
+                      border: medium none !important;
+                      box-shadow: none !important;
+                      height:85px !important;
+                      left: 5px;
+                      .slider{
+                        .slide {
+                          background-color: white;
+                          border: 1px solid #e7e7e7;
+                          height: 75px !important;
+                          margin: 0 12px 0 0 !important;
+                          width: 75px !important;
+                          text-align: center;
+                          @include box-shadow(3px 3px 2px 0px rgba(50, 50, 50, 0.75));
+                          img{
+                            margin:0 auto;
+                            height:100%;
+                          }
+                          &:hover{
+                            cursor:pointer;
+                          }
+                        }
+                      }
+                    }
+                    .bx-prev, .bx-next{
+                      width:42px;
+                      height: 75px;
+                      background: rgba(0, 0, 0, 0) url("plugins/images/prev-next-btn.png") no-repeat;
+                      display: inline !important;
+                    }
+                    .bx-prev {
+                      background-position: 0 0;
+                      top:28px !important;
+                      left: -40px;
+                    }
+                    .bx-next {
+                      background-position: -42px 0;
+                      top:28px !important;
+                      right: -40px;
+                    }
+                  }
+                }
               }
+
+            }
+            .btn-block{
+              float:left;
+              border: 1px solid #e7e7e7;
+              border-width: 0 0 1px 0;
+              #btn-order{
+                float:right;
+                font-size:1em;
+                margin-bottom:10px;
+
+              }
+
+            }
+            .price_list{
+              width:100%;
+              float:left;
+              .modal-title{
+                color:#fff;
+                text-align:center;
+                margin:5px 0;
+              }
+              table{
+                width:85%;
+                margin:0 auto;
+                &.table-striped > tbody > tr:nth-of-type(2n+1) td{
+                  background-color: #e2e2e2;
+                }
+                &.table-bordered{
+                    border: 5px solid #454545;
+                }
+                & > thead > tr {
+                  & th{
+                    background: #454545;
+                    color:#fff;
+                    font-weight: normal;
+                    border: 1px solid #454545;
+                  }
+                  & th:last-child{
+                    width:200px;
+                    text-align: right;
+
+                  }
+                }
+                & > tbody > tr {
+                  & td{
+                    background:#d9d6d3;
+                    border: 1px solid #454545;
+                  }
+                  & td:last-child{
+                    text-align: right;
+                  }
+                }
+              }
+
             }
           }
 

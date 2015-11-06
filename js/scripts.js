@@ -39,13 +39,13 @@ $(function() {
     $(".product_ajax_link").fancybox({
         type: 'ajax',
         afterShow: function(current, previous) {
-            /*$('#product_info .slider11').bxSlider({
-                slideWidth: 200,
+            $('.product_info .slider').bxSlider({
+                slideWidth: 86,
                 minSlides: 3,
                 maxSlides: 3,
                 moveSlides: 1,
                 slideMargin: 1
-            });*/
+            });
         }
     });
     $('.fancybox').fancybox();
