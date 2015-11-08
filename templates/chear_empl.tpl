@@ -39,7 +39,7 @@
 
             </div>
             <div class="btn-block">
-                <button class="btn btn-send" id="btn-order">Предварительный заказ</button>
+                <button class="btn btn-send order" id="btn-order" data-target="#modalOrder">Предварительный заказ</button>
             </div>
             <div class="price_list">
                 <h3 class="modal-title">Прайс-лист на модели кресел для сотрудников</h3>
@@ -52,23 +52,23 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td scope="row">Калифорния</td>
+                        <td scope="row">Калифорния1</td>
                         <td>12 599</td>
                     </tr>
                     <tr>
-                        <td scope="row">Калифорния</td>
+                        <td scope="row">Калифорния2</td>
                         <td>12 599</td>
                     </tr>
                     <tr>
-                        <td scope="row">Калифорния</td>
+                        <td scope="row">Калифорния3</td>
                         <td>12 599</td>
                     </tr>
                     <tr>
-                        <td scope="row">Калифорния</td>
+                        <td scope="row">Калифорния4</td>
                         <td>12 599</td>
                     </tr>
                     <tr>
-                        <td scope="row">Калифорния</td>
+                        <td scope="row">Калифорния5</td>
                         <td>12 599</td>
                     </tr>
                     </tbody>
@@ -81,11 +81,22 @@
 <script>
     <!--
     $(document).ready(function() {
+
         $('.colorbox').colorbox({
             overlayClose: true,
             opacity: 0.5,
             rel: "colorbox"
         });
+
+        //MODAL
+        $('.order').Mmodal({
+            width: 600,
+            height: 'auto',
+            delay: 500
+        });
+        $('#btn-order').on('click', function(){
+            $(this).blur();
+        })
     });
     //-->
     //Замена большой картинки на маленькую при клике
@@ -96,4 +107,6 @@
         $(".product_info .main_image img").attr('src',img_src);
         $(".product_info .main_image a").attr('href',img_popup);
     });
+
+
 </script>

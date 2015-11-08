@@ -29,12 +29,7 @@ $(function() {
         //(e.preventDefault()) ? e.preventDefault() : e.returnValue = false;
 
     });
-    //MODAL
-    /*$('.modal-cover').Mmodal({
-        width: 948,
-        height: 'auto',
-        delay: 500
-    });*/
+
 
     $(".product_ajax_link").fancybox({
         type: 'ajax',
@@ -90,7 +85,4 @@ $(function() {
         }
     });
 });
-function delayedFunc(callback, duration) {
-    setTimeout(callback, duration);
-}
 

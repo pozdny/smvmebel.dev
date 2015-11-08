@@ -72,8 +72,8 @@
             modalH = that.options.height;
         }
         var left = (that.options.wWidth - that.options.width)/2 + 'px';
-       /* var top = (that.options.wHeight - modalH)/2 + 'px';*/
-        var top = 100 + 'px';
+        var top = (that.options.wHeight - modalH)/2 + 'px';
+       /* var top = 100 + 'px';*/
         that.$modalblock.on('click', '.close', $.proxy(that.hide, that));
         that.$modaldiv.on('click',$.proxy(that.hide, that));
         that.$modalblock.on('click',function(e){
@@ -91,16 +91,21 @@
                 modalH = that.options.height + "px";
             }
             that.$modaldiv.addClass('in');
-            that.$modalblock.css({left: left, top:"0px", width:that.options.width + "px", height:modalH});
+            //that.$modalblock.css({left: left, top:"0px", width:that.options.width + "px", height:modalH});
+            that.$modalblock.css({left: left, top:top, width:that.options.width + "px", height:modalH});
             that.$modalblock.stop();
+            //that.$modalblock.css({top:top});
+            //that.$modalblock.fadeIn('slow');
             that.$modalblock.animate(
                 {
-                    duration: 100,
-                    height: "show",
+                    opacity: 'show',
+                    //height: 'show',
+
                     queue: false
-                }
+                },
+                500
             );
-            that.$modalblock.animate(
+            /*that.$modalblock.animate(
                 {
                     top: top
                 },
@@ -109,13 +114,8 @@
                     easing: 'easeInSine',
                     queue: false
                 }
-            );
+            );*/
 
-            $('.colorbox').colorbox({
-                overlayClose: true,
-                opacity: 0.5,
-                rel: "colorbox"
-            });
         };
 
         delayedFunc(modalShow, that.options.delayOpen);
@@ -134,30 +134,34 @@
             that.$modalblock.animate(
                 {
                     opacity: "hide",
-                    height: "hide",
-                    queue: true
+                    queue: false
                 },
-                200,
-                function(){
-                    that.$modaldiv.removeClass('in');
-                    that.$backdrop.removeClass('in');
+
+                {
+                    complete: function(){console.log('123');
+                        that.$modaldiv.removeClass('in');
+                        that.$backdrop.removeClass('in');
+                        that.$backdrop.remove();
+                        $(document.body).removeClass('modal-open');
+                    }
                 }
 
+
             );
-            that.$modalblock.animate(
+            /*that.$modalblock.animate(
                 {
-                    top: "0px"
+                    //top: "0px"
                 },
                 {
-                    duration: 500,
-                    easing: 'easeInSine',
-                    queue: false,
+                    //duration: 300,
+                    //easing: 'easeInSine',
+                    //queue: false,
                     complete:function(){
                         that.$backdrop.remove();
                         $(document.body).removeClass('modal-open');
                     }
                 }
-            );
+            );*/
         };
         delayedFunc(modalHide, this.options.delayClose);
 
@@ -180,3 +184,6 @@
 
 }(jQuery);
 
+function delayedFunc(callback, duration) {
+    setTimeout(callback, duration);
+}

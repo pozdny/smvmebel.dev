@@ -286,14 +286,14 @@ a{
   opacity: 1;
 }
 .modal-backdrop {
-  background: rgba(0, 0, 0, 0) url("../../img/main/overlay.png") repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("./plugins/images/overlay.png") repeat scroll 0 0;
   opacity: 0.9;
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1030;
+  z-index: 8020;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -306,13 +306,33 @@ a{
 	[MODAL]
 	==================
 */
-.modal{
-  .modal-dialog{
-    width:80%;
-    max-width:948px;
-    .modal-content {
-      width:100%;
+/*
+	==================
+	[MODAL]
+	==================
+*/
+.modal {
+  bottom: 0;
+  left: 0;
+  outline: 0 none;
+  overflow-x: auto;
+  overflow-y:auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 8030;
+}
 
+
+.modal{
+  &.in{
+    display:block;
+  }
+
+    .modal-content {
+      display:none;
+      width:100%;
+      z-index: 8040;
       overflow:hidden;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
@@ -354,7 +374,7 @@ a{
       }
 
     }
-   }
+
 }
 
 .modal-open{

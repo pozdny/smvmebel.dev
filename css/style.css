@@ -230,14 +230,14 @@ a {
   opacity: 1; }
 
 .modal-backdrop {
-  background: transparent url("../../img/main/overlay.png") repeat scroll 0 0;
+  background: transparent url("./plugins/images/overlay.png") repeat scroll 0 0;
   opacity: 0.9;
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1030; }
+  z-index: 8020; }
 
 .modal-backdrop.fade {
   opacity: 0; }
@@ -250,52 +250,69 @@ a {
 	[MODAL]
 	==================
 */
-.modal .modal-dialog {
-  width: 80%;
-  max-width: 948px; }
-  .modal .modal-dialog .modal-content {
+/*
+	==================
+	[MODAL]
+	==================
+*/
+.modal {
+  bottom: 0;
+  left: 0;
+  outline: 0 none;
+  overflow-x: auto;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 8030; }
+
+.modal.in {
+  display: block; }
+.modal .modal-content {
+  display: none;
+  width: 100%;
+  z-index: 8040;
+  overflow: hidden;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 3px solid #fff;
+  border-width: 3px; }
+  .modal .modal-content .close {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    z-index: 3;
+    color: #fff; }
+  .modal .modal-content .modal-header {
+    border: none;
+    padding: 5px; }
+    .modal .modal-content .modal-header h3 {
+      text-align: center;
+      font-family: 'Calibri_Bold'; }
+  .modal .modal-content .modal-body {
     width: 100%;
-    overflow: hidden;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    border: 3px solid #fff;
-    border-width: 3px; }
-    .modal .modal-dialog .modal-content .close {
-      position: absolute;
-      top: 3px;
-      right: 5px;
-      z-index: 3;
-      color: #fff; }
-    .modal .modal-dialog .modal-content .modal-header {
-      border: none;
-      padding: 5px; }
-      .modal .modal-dialog .modal-content .modal-header h3 {
-        text-align: center;
-        font-family: 'Calibri_Bold'; }
-    .modal .modal-dialog .modal-content .modal-body {
-      width: 100%;
-      float: left;
-      font-size: 1.2em;
-      padding: 5px;
-      z-index: 2;
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947a7d+0,a5a5a5+50,937477+100 */
-      background: #947a7d;
-      /* Old browsers */
-      background: -moz-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #947a7d), color-stop(50%, #a5a5a5), color-stop(100%, #937477));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-      /* IE10+ */
-      background: linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#947a7d', endColorstr='#937477',GradientType=1 );
-      /* IE6-9 fallback on horizontal gradient */ }
+    float: left;
+    font-size: 1.2em;
+    padding: 5px;
+    z-index: 2;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947a7d+0,a5a5a5+50,937477+100 */
+    background: #947a7d;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #947a7d), color-stop(50%, #a5a5a5), color-stop(100%, #937477));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+    /* IE10+ */
+    background: linear-gradient(45deg, #947a7d 0%, #a5a5a5 50%, #937477 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#947a7d', endColorstr='#937477',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
 
 .modal-open {
   overflow: auto; }

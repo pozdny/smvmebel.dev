@@ -267,6 +267,58 @@
     </div>
 
 
+    <!--Modal Backcall-->
+    <div id="modalOrder" class="modal modalCustom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button">×</button>
+                <h3 class="modal-title">Заявка на звонок</h3>
+            </div>
+            <p>
+                Мы всегда рады предоставить развернутую консультацию. Если Вас интересует что-либо из нашей сферы деятельности – стоимость наших услуг,
+                ассортимент и т.д. – заполните форму, расположенную ниже. Менеджеры свяжутся с Вами вскоре после получения запроса.
+            </p>
+            <div class="modal-body">
+                <form class="form-horizontal" id="backcallForm">
+                    <div class="form-group">
+                        <label for="name_b" class="col-sm-3 control-label">Ваше имя<span class="redStar">*</span></label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="name_b" id="name_b" placeholder="Например: Иван">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone_b" class="col-sm-3 control-label">Ваш телефон<span class="redStar">*</span></label>
+                        <div class="col-sm-6">
+                            <input type="tel" class="form-control" name="phone_b" id="phone_b" placeholder="Например: +7 913 949-13-45">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-4 ">
+                        <button type="submit" class="btn btn-warning orderBtn" id="btnBackCallSend" form="backcallForm" data-loading-text="Подождите..." autocomplete="off">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Modal Backcall-->
+
+    <!--Modal BackCall Answer-->
+    <div id="myModalBackCallAnswer" class="modal modalCustom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button">×</button>
+                <h3 class="modal-title">Спасибо!</h3>
+            </div>
+            <div class="modal-body">
+                <h4>Ваша заявка принята!</h4>
+            </div>
+
+        </div>
+    </div>
+    <!--/Modal BackCall Answer-->
 
 </body>
 <script src="js/bootstrap/bootstrap.min.js"></script>
@@ -274,11 +326,11 @@
 <script src="js/plugins/wow.min.js"></script>
 <script src="js/plugins/jquery.waypoints.min.js"></script>
 <script src="js/plugins/jquery.maskedinput.min.js"></script>
-<script src="js/plugins/Mmodal.plagin.js"></script>
 <script src="js/jquery/colorbox/jquery.colorbox-min.js"></script>
 <script src="js/plugins/jquery.bxslider.js"></script>
 <script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/jquery.fancybox.pack.js"></script>
+<script src="js/plugins/Mmodal.plagin.js"></script>
 <script src="js/plugins/contacts.js"></script>
 <script src="js/scripts.js"></script>
 </html>
